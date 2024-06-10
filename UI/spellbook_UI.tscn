@@ -1,0 +1,225 @@
+[gd_scene format=3 uid="uid://u8q3wqntheof"]
+
+[node name="SpellBook" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+offset_left = 120.0
+offset_top = 52.0
+offset_right = 1037.0
+offset_bottom = 564.0
+
+[node name="Page1" type="Control" parent="Panel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Equipment" type="Control" parent="Panel/Page1"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Hood" type="PanelContainer" parent="Panel/Page1/Equipment"]
+layout_mode = 0
+offset_left = 196.0
+offset_top = 64.0
+offset_right = 268.0
+offset_bottom = 138.0
+
+[node name="Amulet" type="PanelContainer" parent="Panel/Page1/Equipment"]
+layout_mode = 0
+offset_left = 196.0
+offset_top = 152.0
+offset_right = 268.0
+offset_bottom = 226.0
+
+[node name="Robe" type="PanelContainer" parent="Panel/Page1/Equipment"]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 245.0
+offset_right = 269.0
+offset_bottom = 319.0
+
+[node name="Ring1" type="PanelContainer" parent="Panel/Page1/Equipment"]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 343.0
+offset_right = 153.0
+offset_bottom = 385.0
+
+[node name="Ring2" type="PanelContainer" parent="Panel/Page1/Equipment"]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 343.0
+offset_right = 203.0
+offset_bottom = 385.0
+
+[node name="Ring3" type="PanelContainer" parent="Panel/Page1/Equipment"]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 343.0
+offset_right = 252.0
+offset_bottom = 385.0
+
+[node name="Ring4" type="PanelContainer" parent="Panel/Page1/Equipment"]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 343.0
+offset_right = 299.0
+offset_bottom = 385.0
+
+[node name="Ring5" type="PanelContainer" parent="Panel/Page1/Equipment"]
+layout_mode = 0
+offset_left = 305.0
+offset_top = 342.0
+offset_right = 345.0
+offset_bottom = 384.0
+
+[node name="Ring6" type="PanelContainer" parent="Panel/Page1/Equipment"]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 395.0
+offset_right = 155.0
+offset_bottom = 437.0
+
+[node name="Ring7" type="PanelContainer" parent="Panel/Page1/Equipment"]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 395.0
+offset_right = 205.0
+offset_bottom = 437.0
+
+[node name="Ring8" type="PanelContainer" parent="Panel/Page1/Equipment"]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 395.0
+offset_right = 254.0
+offset_bottom = 437.0
+
+[node name="Ring9" type="PanelContainer" parent="Panel/Page1/Equipment"]
+layout_mode = 0
+offset_left = 261.0
+offset_top = 395.0
+offset_right = 301.0
+offset_bottom = 437.0
+
+[node name="Ring10" type="PanelContainer" parent="Panel/Page1/Equipment"]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 394.0
+offset_right = 347.0
+offset_bottom = 436.0
+
+[node name="LeftHandText" type="Label" parent="Panel/Page1"]
+layout_mode = 2
+offset_left = 26.0
+offset_top = 353.0
+offset_right = 108.0
+offset_bottom = 376.0
+text = "Left hand:"
+
+[node name="RightHandText" type="Label" parent="Panel/Page1"]
+layout_mode = 2
+offset_left = 18.0
+offset_top = 404.0
+offset_right = 107.0
+offset_bottom = 427.0
+text = "Right hand:"
+
+[node name="HoodText" type="Label" parent="Panel/Page1"]
+layout_mode = 2
+offset_left = 139.0
+offset_top = 92.0
+offset_right = 191.0
+offset_bottom = 115.0
+text = "Hood:"
+
+[node name="AmuletText" type="Label" parent="Panel/Page1"]
+layout_mode = 2
+offset_left = 125.0
+offset_top = 175.0
+offset_right = 188.0
+offset_bottom = 198.0
+text = "Amulet:"
+
+[node name="RobeText" type="Label" parent="Panel/Page1"]
+layout_mode = 2
+offset_left = 140.0
+offset_top = 274.0
+offset_right = 189.0
+offset_bottom = 297.0
+text = "Robe:"
+
+[node name="Stats" type="Control" parent="Panel/Page1"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Max Health" type="Label" parent="Panel/Page1/Stats"]
+layout_mode = 2
+offset_left = 544.0
+offset_top = 40.0
+offset_right = 909.0
+offset_bottom = 63.0
+text = "Max Health: null"
+
+[node name="Max Mana" type="Label" parent="Panel/Page1/Stats"]
+layout_mode = 2
+offset_left = 544.0
+offset_top = 87.0
+offset_right = 909.0
+offset_bottom = 110.0
+text = "Max Mana: null"
+
+[node name="Physical Resistance" type="Label" parent="Panel/Page1/Stats"]
+layout_mode = 2
+offset_left = 544.0
+offset_top = 203.0
+offset_right = 909.0
+offset_bottom = 226.0
+text = "Physical Resistance: null"
+
+[node name="Fire Resistance" type="Label" parent="Panel/Page1/Stats"]
+layout_mode = 2
+offset_left = 544.0
+offset_top = 253.0
+offset_right = 909.0
+offset_bottom = 276.0
+text = "Fire Resistance: null"
+
+[node name="Frost Resistance" type="Label" parent="Panel/Page1/Stats"]
+layout_mode = 2
+offset_left = 544.0
+offset_top = 308.0
+offset_right = 909.0
+offset_bottom = 331.0
+text = "Frost Resistance: null"
+
+[node name="Shock Resistance" type="Label" parent="Panel/Page1/Stats"]
+layout_mode = 2
+offset_left = 544.0
+offset_top = 369.0
+offset_right = 909.0
+offset_bottom = 392.0
+text = "Shock Resistance: null"
+
+[node name="Curse Resistance" type="Label" parent="Panel/Page1/Stats"]
+layout_mode = 2
+offset_left = 544.0
+offset_top = 432.0
+offset_right = 909.0
+offset_bottom = 455.0
+text = "Curse Resistance: null"
+
+[node name="Page2" type="Control" parent="Panel"]
+anchors_preset = 0
+offset_left = 130.0
+offset_top = 199.0
+offset_right = 170.0
+offset_bottom = 239.0

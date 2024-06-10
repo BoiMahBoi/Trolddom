@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcyquv5dpfjmc"]
+
+[ext_resource type="Script" path="res://EquipmentAndSpells/Spells/AttackSpells/Curseball/curseball_spell.gd" id="1_p3b1s"]
+
+[node name="Curseball_spell" type="Node3D"]
+script = ExtResource("1_p3b1s")

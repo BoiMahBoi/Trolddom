@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://doeocunhhe0go"]
+
+[ext_resource type="Script" path="res://EquipmentAndSpells/Spells/AttackSpells/Frostball/frostball_spell.gd" id="1_5drkm"]
+
+[node name="FrostballSpell" type="Node3D"]
+script = ExtResource("1_5drkm")

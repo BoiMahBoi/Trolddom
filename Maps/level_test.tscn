@@ -1,0 +1,132 @@
+[gd_scene load_steps=8 format=3 uid="uid://dvvqg3ym1i7o7"]
+
+[ext_resource type="Script" path="res://Maps/Level_Test.gd" id="1_a4mdf"]
+[ext_resource type="PackedScene" uid="uid://cvpv4wr2ffwpv" path="res://Entities/Player/player.tscn" id="1_lne3x"]
+[ext_resource type="PackedScene" uid="uid://f0w5d4kkro75" path="res://Entities/Enemies/enemy_test.tscn" id="4_pq4gn"]
+[ext_resource type="PackedScene" uid="uid://cp4xpq42yw5sq" path="res://Testing/Inverse Kinematics/IKTestEnemy.tscn" id="5_hl063"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_dkhwn"]
+vertices = PackedVector3Array(-27.592, -0.96384, -27.7371, -27.592, -0.96384, 27.7629, 27.658, -0.96384, 27.7629, 27.658, -0.96384, -27.7371)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+
+[sub_resource type="BoxMesh" id="BoxMesh_8ecgk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wficm"]
+
+[node name="Level_Test" type="Node"]
+script = ExtResource("1_a4mdf")
+
+[node name="Player" parent="." instance=ExtResource("1_lne3x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0243558, 1.24264, 1.61902)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.714253, 0, 0.699888, -0.612112, 0.484871, 0.624675, -0.339355, -0.874586, 0.34632, 9.7434, 10.2728, 6.38183)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_dkhwn")
+
+[node name="Floor" type="Node3D" parent="NavigationRegion3D"]
+transform = Transform3D(56.184, 0, 0, 0, 0.171903, 0, 0, 0, 56.4741, 0, -1.37789, -23.0047)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Floor"]
+mesh = SubResource("BoxMesh_8ecgk")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Floor/StaticBody3D"]
+shape = SubResource("BoxShape3D_wficm")
+
+[node name="Floor2" type="Node3D" parent="NavigationRegion3D"]
+transform = Transform3D(56.184, 0, 0, 0, 0.171903, 0, 0, 0, 56.4741, 0, 7.44331, -23.0047)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Floor2"]
+mesh = SubResource("BoxMesh_8ecgk")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Floor2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Floor2/StaticBody3D"]
+shape = SubResource("BoxShape3D_wficm")
+
+[node name="Wall1" type="Node3D" parent="NavigationRegion3D"]
+transform = Transform3D(-4.11278e-07, -0.171903, 0, 9.40894, -7.51412e-09, 0, 0, 0, 9.07091, 2, 3.154, 2.34937)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Wall1"]
+mesh = SubResource("BoxMesh_8ecgk")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Wall1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Wall1/StaticBody3D"]
+shape = SubResource("BoxShape3D_wficm")
+
+[node name="Wall4" type="Node3D" parent="NavigationRegion3D"]
+transform = Transform3D(-4.11278e-07, -0.171903, 0, 9.40894, -7.51412e-09, 0, 0, 0, 11.674, 7, 3.154, -7.82152)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Wall4"]
+mesh = SubResource("BoxMesh_8ecgk")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Wall4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Wall4/StaticBody3D"]
+shape = SubResource("BoxShape3D_wficm")
+
+[node name="Wall2" type="Node3D" parent="NavigationRegion3D"]
+transform = Transform3D(-4.11278e-07, -0.171903, 0, 9.40894, -7.51412e-09, 0, 0, 0, 9.07091, -2, 3.154, 2.34937)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Wall2"]
+transform = Transform3D(1, 0, 0, 2.27374e-13, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_8ecgk")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Wall2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Wall2/StaticBody3D"]
+shape = SubResource("BoxShape3D_wficm")
+
+[node name="Wall5" type="Node3D" parent="NavigationRegion3D"]
+transform = Transform3D(-4.11278e-07, -0.171903, 0, 9.40894, -7.51412e-09, 0, 0, 0, 11.674, -7, 3.154, -7.82152)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Wall5"]
+mesh = SubResource("BoxMesh_8ecgk")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Wall5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Wall5/StaticBody3D"]
+shape = SubResource("BoxShape3D_wficm")
+
+[node name="Wall3" type="Node3D" parent="NavigationRegion3D"]
+transform = Transform3D(1.79775e-14, 7.51412e-09, 9.07091, 9.40894, -7.51412e-09, 0, 4.11278e-07, 0.171903, -3.96502e-07, 0.464561, 3.154, 5.14748)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Wall3"]
+mesh = SubResource("BoxMesh_8ecgk")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Wall3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Wall3/StaticBody3D"]
+shape = SubResource("BoxShape3D_wficm")
+
+[node name="Wall6" type="Node3D" parent="NavigationRegion3D"]
+transform = Transform3D(1.79775e-14, 7.51412e-09, 9.07091, 9.40894, -7.51412e-09, 0, 4.11278e-07, 0.171903, -3.96502e-07, 6.45, 3.154, -2.119)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Wall6"]
+mesh = SubResource("BoxMesh_8ecgk")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Wall6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Wall6/StaticBody3D"]
+shape = SubResource("BoxShape3D_wficm")
+
+[node name="Wall7" type="Node3D" parent="NavigationRegion3D"]
+transform = Transform3D(1.79775e-14, 7.51412e-09, 9.07091, 9.40894, -7.51412e-09, 0, 4.11278e-07, 0.171903, -3.96502e-07, -6.45, 3.154, -2.119)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Wall7"]
+mesh = SubResource("BoxMesh_8ecgk")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Wall7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Wall7/StaticBody3D"]
+shape = SubResource("BoxShape3D_wficm")
+
+[node name="EnemyTest" parent="." instance=ExtResource("4_pq4gn")]
+transform = Transform3D(0.99997, -0.00778409, 0, 0.00778409, 0.99997, 0, 0, 0, 1, -21.4064, 0.982923, -19.3193)
+
+[node name="EnemyTest2" parent="." instance=ExtResource("5_hl063")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.109308, -21.7834)

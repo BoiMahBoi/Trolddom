@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://bpj8ihhbowi42"]
+
+[node name="TestUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 1.0
+offset_right = 192.0
+offset_bottom = 41.0
+scale = Vector2(21.6346, 2.81989)
+
+[node name="Label0" type="Label" parent="."]
+layout_mode = 2
+offset_left = 230.0
+offset_top = 40.0
+offset_right = 288.0
+offset_bottom = 63.0
+text = "None
+"
+
+[node name="Label1" type="Label" parent="."]
+layout_mode = 2
+offset_left = 385.0
+offset_top = 40.0
+offset_right = 443.0
+offset_bottom = 63.0
+text = "None
+"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 2
+offset_left = 544.0
+offset_top = 40.0
+offset_right = 602.0
+offset_bottom = 63.0
+text = "None
+"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 2
+offset_left = 701.0
+offset_top = 40.0
+offset_right = 759.0
+offset_bottom = 63.0
+text = "None
+"
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 2
+offset_left = 841.0
+offset_top = 40.0
+offset_right = 899.0
+offset_bottom = 63.0
+text = "None
+"

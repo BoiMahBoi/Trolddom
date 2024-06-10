@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cw7ugbeqpioht"]
+
+[ext_resource type="PackedScene" uid="uid://ct433fn2walan" path="res://Testing/Inverse Kinematics/T-Pose.fbx" id="1_tp1s3"]
+
+[node name="IKTest" type="Node3D"]
+
+[node name="IKTestModel" parent="." instance=ExtResource("1_tp1s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.256317, 1.19209e-07, -0.147804)

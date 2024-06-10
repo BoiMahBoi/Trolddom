@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://d056ecji8wwqk"]
+
+[ext_resource type="PackedScene" uid="uid://gud8vkdani67" path="res://Testing/Wand/Wand.fbx" id="1_npnj8"]
+[ext_resource type="Texture2D" uid="uid://ca1k0f8ni4lmf" path="res://Testing/SpellBook/SpellBookTex.png" id="2_ps5li"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1f34a"]
+albedo_texture = ExtResource("2_ps5li")
+
+[node name="Root Scene" instance=ExtResource("1_npnj8")]
+
+[node name="Cube" parent="RootNode" index="0"]
+transform = Transform3D(-12.7947, -1.81824e-13, -1.86497e-05, -1.11855e-06, 2.28787e-06, 213.328, 0, 12.7947, -2.54307e-05, -0.000763535, 0.0047453, -0.000184774)
+layers = 2
+surface_material_override/0 = SubResource("StandardMaterial3D_1f34a")

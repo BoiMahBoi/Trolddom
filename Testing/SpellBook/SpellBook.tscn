@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://n1dhpo305tpj"]
+
+[ext_resource type="PackedScene" uid="uid://bxy2lsx4gh785" path="res://Testing/SpellBook/Spellbook.fbx" id="1_uh37o"]
+[ext_resource type="Texture2D" uid="uid://ca1k0f8ni4lmf" path="res://Testing/SpellBook/SpellBookTex.png" id="2_uakoe"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mkf4l"]
+albedo_texture = ExtResource("2_uakoe")
+
+[node name="SpellBook" instance=ExtResource("1_uh37o")]
+
+[node name="Cube" parent="RootNode" index="0"]
+layers = 2
+surface_material_override/0 = SubResource("StandardMaterial3D_mkf4l")

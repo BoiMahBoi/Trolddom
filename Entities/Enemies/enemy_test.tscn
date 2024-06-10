@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://f0w5d4kkro75"]
+
+[ext_resource type="PackedScene" uid="uid://81ssi5s0wm0l" path="res://Common Components/health_component.tscn" id="1_6tgev"]
+[ext_resource type="Script" path="res://Entities/Enemies/enemy_test.gd" id="1_swnnm"]
+[ext_resource type="PackedScene" uid="uid://bod306dhhumqt" path="res://Common Components/hitbox_component.tscn" id="2_tqv17"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_63pqh"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fkjdd"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rjthp"]
+radius = 0.548579
+height = 2.12865
+
+[node name="EnemyTest" type="CharacterBody3D" groups=["enemies"]]
+script = ExtResource("1_swnnm")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_63pqh")
+
+[node name="Shape" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_fkjdd")
+
+[node name="HealthComponent" parent="." instance=ExtResource("1_6tgev")]
+fireResist = 90
+frostResist = 90
+
+[node name="HitboxComponent" parent="." instance=ExtResource("2_tqv17")]
+
+[node name="Shape" type="CollisionShape3D" parent="HitboxComponent"]
+shape = SubResource("CapsuleShape3D_rjthp")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
