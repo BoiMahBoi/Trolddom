@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://cs86dfd4c5lvh"]
+
+[ext_resource type="Script" path="res://EquipmentAndSpells/Pickups/spell_scroll.gd" id="1_sw6cx"]
+[ext_resource type="PackedScene" uid="uid://cunlcbqpui3w5" path="res://Common Components/InteractableComponent/interactable_component.tscn" id="2_cpt66"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jbqao"]
+albedo_color = Color(0.368215, 0.330931, 0.279361, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_00slm"]
+material = SubResource("StandardMaterial3D_jbqao")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_qtfxe"]
+
+[node name="SpellScroll" type="Node3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+script = ExtResource("1_sw6cx")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_00slm")
+
+[node name="InteractableComponent" parent="." instance=ExtResource("2_cpt66")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractableComponent"]
+shape = SubResource("CylinderShape3D_qtfxe")

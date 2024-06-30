@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Maps/Level_Test.gd" id="1_a4mdf"]
 [ext_resource type="PackedScene" uid="uid://cvpv4wr2ffwpv" path="res://Entities/Player/player.tscn" id="1_lne3x"]
 [ext_resource type="PackedScene" uid="uid://f0w5d4kkro75" path="res://Entities/Enemies/enemy_test.tscn" id="4_pq4gn"]
-[ext_resource type="PackedScene" uid="uid://cp4xpq42yw5sq" path="res://Testing/Inverse Kinematics/IKTestEnemy.tscn" id="5_hl063"]
+[ext_resource type="PackedScene" uid="uid://cs86dfd4c5lvh" path="res://EquipmentAndSpells/Pickups/spell_scroll.tscn" id="4_vr1ve"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_dkhwn"]
 vertices = PackedVector3Array(-27.592, -0.96384, -27.7371, -27.592, -0.96384, 27.7629, 27.658, -0.96384, 27.7629, 27.658, -0.96384, -27.7371)
@@ -126,7 +126,7 @@ mesh = SubResource("BoxMesh_8ecgk")
 shape = SubResource("BoxShape3D_wficm")
 
 [node name="EnemyTest" parent="." instance=ExtResource("4_pq4gn")]
-transform = Transform3D(0.99997, -0.00778409, 0, 0.00778409, 0.99997, 0, 0, 0, 1, -21.4064, 0.982923, -19.3193)
+transform = Transform3D(0.99997, -0.00778409, 0, 0.00778409, 0.99997, 0, 0, 0, 1, -15.9443, 0.982923, -12.1932)
 
-[node name="EnemyTest2" parent="." instance=ExtResource("5_hl063")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.109308, -21.7834)
+[node name="SpellScroll" parent="." instance=ExtResource("4_vr1ve")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1, -1, -11)

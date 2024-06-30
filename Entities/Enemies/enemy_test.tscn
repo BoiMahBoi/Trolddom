@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://f0w5d4kkro75"]
 
-[ext_resource type="PackedScene" uid="uid://81ssi5s0wm0l" path="res://Common Components/health_component.tscn" id="1_6tgev"]
 [ext_resource type="Script" path="res://Entities/Enemies/enemy_test.gd" id="1_swnnm"]
-[ext_resource type="PackedScene" uid="uid://bod306dhhumqt" path="res://Common Components/hitbox_component.tscn" id="2_tqv17"]
+[ext_resource type="PackedScene" uid="uid://81ssi5s0wm0l" path="res://Common Components/HealthComponent/health_component.tscn" id="2_v28b6"]
+[ext_resource type="PackedScene" uid="uid://bod306dhhumqt" path="res://Common Components/HitboxComponent/hitbox_component.tscn" id="3_vk4eu"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_63pqh"]
 
@@ -21,11 +21,11 @@ mesh = SubResource("CapsuleMesh_63pqh")
 [node name="Shape" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_fkjdd")
 
-[node name="HealthComponent" parent="." instance=ExtResource("1_6tgev")]
+[node name="HealthComponent" parent="." instance=ExtResource("2_v28b6")]
 fireResist = 90
 frostResist = 90
 
-[node name="HitboxComponent" parent="." instance=ExtResource("2_tqv17")]
+[node name="HitboxComponent" parent="." groups=["hitbox"] instance=ExtResource("3_vk4eu")]
 
 [node name="Shape" type="CollisionShape3D" parent="HitboxComponent"]
 shape = SubResource("CapsuleShape3D_rjthp")

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cunlcbqpui3w5"]
+
+[ext_resource type="Script" path="res://Common Components/InteractableComponent/InteractableComponent.gd" id="1_kjxn2"]
+
+[node name="InteractableComponent" type="Area3D" groups=["Interactable"]]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_kjxn2")
