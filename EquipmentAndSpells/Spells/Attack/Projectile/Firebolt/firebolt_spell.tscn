@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://di82cgwyij0rj"]
+
+[ext_resource type="Script" path="res://EquipmentAndSpells/Spells/Attack/Projectile/Firebolt/firebolt_spell.gd" id="1_6vy10"]
+
+[node name="FireboltSpell" type="Node3D"]
+script = ExtResource("1_6vy10")
+spellName = "Fireball"
+spellDescription = "Fires a ball of fire"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cvpv4wr2ffwpv"]
+[gd_scene load_steps=20 format=3 uid="uid://cvpv4wr2ffwpv"]
 
 [ext_resource type="Script" path="res://Entities/Player/Player.gd" id="1_ateo7"]
 [ext_resource type="Script" path="res://Entities/Player/Interaction.gd" id="2_7ibma"]
@@ -7,17 +7,16 @@
 [ext_resource type="PackedScene" uid="uid://bod306dhhumqt" path="res://Common Components/HitboxComponent/hitbox_component.tscn" id="4_jxgkd"]
 [ext_resource type="PackedScene" uid="uid://81ssi5s0wm0l" path="res://Common Components/HealthComponent/health_component.tscn" id="5_841gy"]
 [ext_resource type="Script" path="res://Common Components/CastingComponent/CastingComponent.gd" id="6_vyvlb"]
-[ext_resource type="PackedScene" uid="uid://4h8q0x6ma5n1" path="res://EquipmentAndSpells/Spells/ModifierSpells/modifiertest_spell.tscn" id="7_h0uly"]
-[ext_resource type="PackedScene" uid="uid://ccl6tnagmm26t" path="res://EquipmentAndSpells/Spells/Projectiles/Fireball/fireball_spell.tscn" id="7_jj2t0"]
 [ext_resource type="PackedScene" uid="uid://u8q3wqntheof" path="res://UI/spellbook_UI.tscn" id="7_k1yc8"]
-[ext_resource type="PackedScene" uid="uid://di82cgwyij0rj" path="res://EquipmentAndSpells/Spells/Projectiles/Firebolt/firebolt_spell.tscn" id="8_olgyo"]
-[ext_resource type="PackedScene" uid="uid://doeocunhhe0go" path="res://EquipmentAndSpells/Spells/Projectiles/Frostball/frostball_spell.tscn" id="9_5hlvk"]
-[ext_resource type="PackedScene" uid="uid://by8krrrtoq21g" path="res://EquipmentAndSpells/Spells/Projectiles/Frostbolt/frostbolt_spell.tscn" id="10_15qxc"]
+[ext_resource type="PackedScene" uid="uid://di82cgwyij0rj" path="res://EquipmentAndSpells/Spells/Attack/Projectile/Firebolt/firebolt_spell.tscn" id="8_olgyo"]
+[ext_resource type="PackedScene" uid="uid://doeocunhhe0go" path="res://EquipmentAndSpells/Spells/Attack/Projectile/Frostball/frostball_spell.tscn" id="9_5hlvk"]
+[ext_resource type="PackedScene" uid="uid://by8krrrtoq21g" path="res://EquipmentAndSpells/Spells/Attack/Projectile/Frostbolt/frostbolt_spell.tscn" id="10_15qxc"]
 [ext_resource type="Script" path="res://Entities/Player/ArmCamera.gd" id="10_70mhh"]
-[ext_resource type="PackedScene" uid="uid://d0m8carem1du6" path="res://EquipmentAndSpells/Spells/Projectiles/Shockball/shockball_spell.tscn" id="12_rhkmh"]
-[ext_resource type="PackedScene" uid="uid://bdn5ucr1jrfrq" path="res://EquipmentAndSpells/Spells/Projectiles/Shockbolt/shockbolt_spell.tscn" id="13_mypid"]
-[ext_resource type="PackedScene" uid="uid://cngytke61d28h" path="res://EquipmentAndSpells/Spells/Projectiles/Cursebolt/cursebolt_spell.tscn" id="14_cplbg"]
-[ext_resource type="PackedScene" uid="uid://dcyquv5dpfjmc" path="res://EquipmentAndSpells/Spells/Projectiles/Curseball/curseball_spell.tscn" id="15_uio3n"]
+[ext_resource type="PackedScene" uid="uid://4h8q0x6ma5n1" path="res://EquipmentAndSpells/Spells/Modifier/Test/modifiertest_spell.tscn" id="11_ebir0"]
+[ext_resource type="PackedScene" uid="uid://d0m8carem1du6" path="res://EquipmentAndSpells/Spells/Attack/Projectile/Shockball/shockball_spell.tscn" id="12_rhkmh"]
+[ext_resource type="PackedScene" uid="uid://bdn5ucr1jrfrq" path="res://EquipmentAndSpells/Spells/Attack/Projectile/Shockbolt/shockbolt_spell.tscn" id="13_mypid"]
+[ext_resource type="PackedScene" uid="uid://cngytke61d28h" path="res://EquipmentAndSpells/Spells/Attack/Projectile/Cursebolt/cursebolt_spell.tscn" id="14_cplbg"]
+[ext_resource type="PackedScene" uid="uid://dcyquv5dpfjmc" path="res://EquipmentAndSpells/Spells/Attack/Projectile/Curseball/curseball_spell.tscn" id="15_uio3n"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4kglo"]
 
@@ -84,30 +83,17 @@ script = ExtResource("6_vyvlb")
 [node name="KnownSpells" type="Node3D" parent="."]
 unique_name_in_owner = true
 
-[node name="FireballSpell" parent="KnownSpells" instance=ExtResource("7_jj2t0")]
-
 [node name="FireboltSpell" parent="KnownSpells" instance=ExtResource("8_olgyo")]
-spellName = "Firebolt"
-spellDescription = "Fires a bolt of fire"
 
 [node name="frostballspell" parent="KnownSpells" instance=ExtResource("9_5hlvk")]
 
 [node name="FrostboltSpell" parent="KnownSpells" instance=ExtResource("10_15qxc")]
-spellName = "Frostbolt"
 
-[node name="modifiertest_spell" parent="KnownSpells" instance=ExtResource("7_h0uly")]
-spellName = "ModifierTest"
-spellType = "Modifier"
+[node name="modifiertest_spell" parent="KnownSpells" instance=ExtResource("11_ebir0")]
 
 [node name="ShockballSpell" parent="KnownSpells" instance=ExtResource("12_rhkmh")]
-spellName = "Shockball"
-spellDescription = "Fires a ball of electricity"
-keyCombination = ["left", "left", "left", "left", "right"]
 
 [node name="ShockboltSpell" parent="KnownSpells" instance=ExtResource("13_mypid")]
-spellName = "Shockbolt"
-spellDescription = "Fires a bolt of electricity"
-keyCombination = ["left", "left", "right", "left", "right"]
 
 [node name="Cursebolt_spell" parent="KnownSpells" instance=ExtResource("14_cplbg")]
 

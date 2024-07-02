@@ -34,16 +34,16 @@ func _process(delta):
 		for chosenSpell in spellsReady:
 			if chosenSpell != null:
 				# If the spell is a modifier spell, iterate backwards in the array until another spell is reached.
-				if chosenSpell.spellType == "Modifier":
+				if chosenSpell.spell_category == "Modifier":
 					for p in range(i,-1,-1):
-						if spellsReady[p].spellType != "Modifier":
+						if spellsReady[p].spell_category != "Modifier":
 							chosenSpell.modifySpell(spellsReady[p])
 							break
 				else:
 					# If the spell is not a modifier spell, and there is enough mana to cast it, cast the spell.
-					if currentMana > chosenSpell.manaCost:
+					if currentMana > chosenSpell.mana_cost:
 						chosenSpell.castSpell(null, castingPositions[i])
-						currentMana = currentMana - chosenSpell.manaCost
+						currentMana = currentMana - chosenSpell.mana_cost
 				i = i + 1
 
 	if Input.is_action_just_pressed("unready_spell"):
@@ -52,7 +52,7 @@ func _process(delta):
 			currentKey = currentKey - 1
 			print(pressedKeys)
 		elif currentKey == 0 && spellsReady.size() > 0:
-			currentReadyingMana += spellsReady[currentSpell - 1].manaCost
+			currentReadyingMana += spellsReady[currentSpell - 1].mana_cost
 			spellsReady[currentSpell - 1] = null
 			currentSpell -= 1
 			print(spellsReady)
@@ -93,13 +93,13 @@ func nextKeyslot():
 func readySpell():
 	var i = 0
 	for spell in knownSpells:
-		print(spell, spell.keyCombination)
+		print(spell, spell.key_combination)
 		i = i + 1
-		if spell.keyCombination == pressedKeys:
+		if spell.key_combination == pressedKeys:
 			if currentSpell < spellsReady.size():
-				if currentReadyingMana >= spell.manaCost:
+				if currentReadyingMana >= spell.mana_cost:
 					spellsReady[currentSpell] = spell
-					currentReadyingMana = currentReadyingMana - spell.manaCost
+					currentReadyingMana = currentReadyingMana - spell.mana_cost
 					print("Current mana: ", currentReadyingMana)
 					currentSpell = currentSpell + 1
 					break
@@ -110,6 +110,17 @@ func readySpell():
 	pressedKeys = ["null","null","null","null","null"]
 	print(spellsReady)
 	
+func getRandomSpell():
+	var new_spell = load("res://EquipmentAndSpells/Spells/Attack/Projectile/Fireball/fireball_spell.tscn").instantiate()
+	%KnownSpells.add_child(new_spell)
+	updateKnownSpells()
+
+func getSpell(spell):
+	#Find out how best to find the path of the given spell, then use that in the load method.
+	var new_spell = load("spell.path").instantiate()
+	%KnownSpells.add_child(new_spell)
+	updateKnownSpells()
+
 func updateKnownSpells():
 	knownSpells = spellBook.get_children()
 	print("Known spells: ", knownSpells)

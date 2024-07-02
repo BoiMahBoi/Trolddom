@@ -11,4 +11,5 @@ func _process(delta):
 	pass
 
 func interact():
+	get_parent().get_node("Player").get_node("CastingComponent").getRandomSpell()
 	print("Interacted on parent!")

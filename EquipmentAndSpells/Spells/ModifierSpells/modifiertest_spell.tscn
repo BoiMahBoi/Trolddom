@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://4h8q0x6ma5n1"]
-
-[ext_resource type="Script" path="res://EquipmentAndSpells/Spells/ModifierSpells/modifiertest_spell.gd" id="1_k5051"]
-
-[node name="modifiertest_spell" type="Node3D"]
-script = ExtResource("1_k5051")
-spellName = "Frostball"
-spellType = "Attack"
-manaCost = 20

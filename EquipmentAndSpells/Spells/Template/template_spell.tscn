@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://busijtjj8cg8u"]
 
-[ext_resource type="Script" path="res://EquipmentAndSpells/Spells/ModifierSpells/modifiertest_spell.gd" id="1_a74yn"]
+[ext_resource type="Script" path="res://EquipmentAndSpells/Spells/Modifier/Test/modifiertest_spell.gd" id="1_a74yn"]
 
 [node name="Template_Spell" type="Node3D"]
 script = ExtResource("1_a74yn")

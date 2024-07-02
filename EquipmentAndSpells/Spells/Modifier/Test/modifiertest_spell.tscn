@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://4h8q0x6ma5n1"]
+
+[ext_resource type="Script" path="res://EquipmentAndSpells/Spells/Modifier/Test/modifiertest_spell.gd" id="1_ujs3o"]
+
+[node name="modifiertest_spell" type="Node3D"]
+script = ExtResource("1_ujs3o")

@@ -4,7 +4,7 @@ extends Node3D
 @export var current_health = 100
 
 @export var physicalResist = 10
-@export var fireResist = 20
+@export var fireResist = 10
 @export var frostResist = 0
 @export var shockResist = 0
 @export var curseResist = 20

@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cngytke61d28h"]
-
-[ext_resource type="Script" path="res://EquipmentAndSpells/Spells/Projectiles/Cursebolt/cursebolt_spell.gd" id="1_d1so5"]
-
-[node name="Cursebolt_spell" type="Node3D"]
-script = ExtResource("1_d1so5")
