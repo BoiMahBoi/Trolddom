@@ -9,8 +9,8 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fkjdd"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rjthp"]
-radius = 0.548579
-height = 2.12865
+radius = 0.448467
+height = 1.12691
 
 [node name="EnemyTest" type="CharacterBody3D" groups=["enemies"]]
 script = ExtResource("1_swnnm")
@@ -22,8 +22,8 @@ mesh = SubResource("CapsuleMesh_63pqh")
 shape = SubResource("CapsuleShape3D_fkjdd")
 
 [node name="HealthComponent" parent="." instance=ExtResource("2_v28b6")]
-fireResist = 90
-frostResist = 90
+fireResist = 50
+frostResist = 50
 
 [node name="HitboxComponent" parent="." groups=["hitbox"] instance=ExtResource("3_vk4eu")]
 
