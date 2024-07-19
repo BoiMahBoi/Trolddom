@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bqkkvwjmvvyex"
+path.s3tc="res://.godot/imported/STEN_L_VÆG2_rock_face_03_nor_gl_4k.png-bd646df92672c910afc3d90746d68ff8.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "06a748dd61f4db8a2640ece3b40bfa6e"
+}
+
+[deps]
+
+source_file="res://Bach/objekter/sten/GLB/STEN_L_VÆG2_rock_face_03_nor_gl_4k.png"
+dest_files=["res://.godot/imported/STEN_L_VÆG2_rock_face_03_nor_gl_4k.png-bd646df92672c910afc3d90746d68ff8.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://Bach/objekter/sten/STEN_L_VÆG2_rock_face_03_nor_gl_4k.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
