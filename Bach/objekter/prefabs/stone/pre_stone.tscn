@@ -9,6 +9,12 @@
 [node name="STEN1" parent="." instance=ExtResource("1_tjpen")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.772612, 0)
 
+[node name="STEN5" parent="." instance=ExtResource("2_fq800")]
+transform = Transform3D(-0.0211569, 0, -0.299253, 0, 0.3, 0, 0.299253, 0, -0.0211569, -0.294291, 0.106596, -2.13963)
+
+[node name="STEN4" parent="." instance=ExtResource("2_fq800")]
+transform = Transform3D(-0.108368, 0, -0.385041, 0, 0.4, 0, 0.385041, 0, -0.108368, 1.51306, 0.206708, 0.124946)
+
 [node name="STEN2" parent="." instance=ExtResource("2_fq800")]
 transform = Transform3D(0.695549, 0, 0.718478, 0, 1, 0, -0.718478, 0, 0.695549, 1.48415, 0.646333, -1.77996)
 
