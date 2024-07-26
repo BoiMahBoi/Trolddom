@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://gckokj7yhner"]
+
+[ext_resource type="PackedScene" uid="uid://bok5i3sn3ujn8" path="res://Bach/enemy/darugr/GLB/Draugr.glb" id="1_ujdf5"]
+
+[node name="Fuck" type="MeshInstance3D"]
+
+[node name="Draugr" parent="." instance=ExtResource("1_ujdf5")]

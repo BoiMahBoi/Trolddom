@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://dyqo7lpkhafyf"]
+
+[ext_resource type="PackedScene" uid="uid://cnt3kdot74ixp" path="res://Bach/objekter/sten/sten_s_væg_2.tscn" id="1_62cl5"]
+[ext_resource type="PackedScene" uid="uid://ddk8r6q446gtd" path="res://Bach/objekter/sten/sten_s_væg.tscn" id="2_inhbc"]
+[ext_resource type="PackedScene" uid="uid://0f11c1viulkl" path="res://Bach/objekter/sten/sten_port.tscn" id="3_e45g0"]
+[ext_resource type="PackedScene" uid="uid://djgr7iqr4igea" path="res://Bach/objekter/sten/sten_l_væg_1.tscn" id="4_7qcyw"]
+[ext_resource type="PackedScene" uid="uid://ctnb3eeqfkw31" path="res://Bach/objekter/prefabs/stone/pre_stone2.tscn" id="5_3vf60"]
+[ext_resource type="PackedScene" uid="uid://dhh88rh56rdit" path="res://Bach/objekter/prefabs/stone/pre_stone.tscn" id="6_liuma"]
+[ext_resource type="PackedScene" uid="uid://doy5abbhl7pi" path="res://Bach/objekter/prefabs/ice_stones/pre_ice_stones_1.tscn" id="7_pw4fb"]
+[ext_resource type="PackedScene" uid="uid://v5xocyunq5v1" path="res://Bach/objekter/is/is_sten_1.tscn" id="8_p45wk"]
+
+[node name="PreScene1p2" type="Node3D"]
+
+[node name="STEN_S_VÆG6" parent="." instance=ExtResource("1_62cl5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.67888, 1.67012, 4.62793)
+
+[node name="STEN_S_VÆG7" parent="STEN_S_VÆG6" instance=ExtResource("2_inhbc")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.0553064, -0.011982, 5.53204)
+
+[node name="STEN_S_VÆG2" parent="STEN_S_VÆG6" instance=ExtResource("2_inhbc")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8.56769, -0.0282713, -3.56074)
+
+[node name="STEN_S_VÆG" parent="STEN_S_VÆG6" instance=ExtResource("2_inhbc")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8.74812, -0.0358713, 8.18004)
+
+[node name="STEN_S_VÆG3" parent="STEN_S_VÆG6" instance=ExtResource("1_62cl5")]
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -11.5968, 0.145159, -0.396948)
+
+[node name="STEN_PORT" parent="STEN_S_VÆG6" instance=ExtResource("3_e45g0")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.17523, 0.0974233, -3.80477)
+
+[node name="STEN_L_VÆG1" parent="STEN_S_VÆG6" instance=ExtResource("4_7qcyw")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.14141, -0.0850863, -3.216)
+
+[node name="STEN_S_VÆG4" parent="STEN_S_VÆG6" instance=ExtResource("1_62cl5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.28551, -0.0156288, 8.19899)
+
+[node name="STEN_S_VÆG5" parent="STEN_S_VÆG6" instance=ExtResource("2_inhbc")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -11.5415, 0.133177, 5.13509)
+
+[node name="PreStone2" parent="." instance=ExtResource("5_3vf60")]
+transform = Transform3D(0.380879, 0, -0.463607, 0, 0.6, 0, 0.463607, 0, 0.380879, -4.96375, 0.137115, -5.96052)
+
+[node name="PreStone3" parent="." instance=ExtResource("5_3vf60")]
+transform = Transform3D(0.14537, 0, -0.137359, 0, 0.2, 0, 0.137359, 0, 0.14537, 4.03135, -0.0301552, 2.37626)
+
+[node name="PreStone" parent="." instance=ExtResource("6_liuma")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 4.01453, -0.0301552, -3.34266)
+
+[node name="PreStone4" parent="." instance=ExtResource("5_3vf60")]
+transform = Transform3D(0.223895, 0, -0.447069, 0, 0.5, 0, 0.447069, 0, 0.223895, -5.0646, -0.0301552, -0.977078)
+
+[node name="PreStone5" parent="." instance=ExtResource("6_liuma")]
+transform = Transform3D(0.241434, 0, -0.178072, 0, 0.3, 0, 0.178072, 0, 0.241434, -5.59162, -0.0301552, 3.67901)
+
+[node name="PreIceStones1" parent="." instance=ExtResource("7_pw4fb")]
+transform = Transform3D(0.921579, 0, -0.388191, 0, 1, 0, 0.388191, 0, 0.921579, -5.09202, -0.0301552, -3.51142)
+
+[node name="IS_STEN1" parent="." instance=ExtResource("8_p45wk")]
+transform = Transform3D(0.320596, 0, -0.947216, 0, 1, 0, 0.947216, 0, 0.320596, 3.71948, 0.971686, 3.8641)
+
+[node name="IS_STEN2" parent="." instance=ExtResource("8_p45wk")]
+transform = Transform3D(0.77088, 0, -0.63698, 0, 1, 0, 0.63698, 0, 0.77088, 4.34384, 0.943064, -2.01273)
+
+[node name="PreIceStones2" parent="." instance=ExtResource("7_pw4fb")]
+transform = Transform3D(-0.887172, 0, 0.461439, 0, 1, 0, -0.461439, 0, -0.887172, -0.158762, 0, -0.212095)

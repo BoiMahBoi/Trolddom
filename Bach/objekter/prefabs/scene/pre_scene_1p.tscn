@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://c80a5uj4htq3h"]
+
+[ext_resource type="PackedScene" uid="uid://cnt3kdot74ixp" path="res://Bach/objekter/sten/sten_s_væg_2.tscn" id="1_8ug8y"]
+[ext_resource type="PackedScene" uid="uid://ddk8r6q446gtd" path="res://Bach/objekter/sten/sten_s_væg.tscn" id="2_kqgh4"]
+[ext_resource type="PackedScene" uid="uid://0f11c1viulkl" path="res://Bach/objekter/sten/sten_port.tscn" id="3_r8hb7"]
+[ext_resource type="PackedScene" uid="uid://djgr7iqr4igea" path="res://Bach/objekter/sten/sten_l_væg_1.tscn" id="4_n30st"]
+[ext_resource type="PackedScene" uid="uid://ctnb3eeqfkw31" path="res://Bach/objekter/prefabs/stone/pre_stone2.tscn" id="5_n8h3j"]
+[ext_resource type="PackedScene" uid="uid://dhh88rh56rdit" path="res://Bach/objekter/prefabs/stone/pre_stone.tscn" id="6_gqi67"]
+[ext_resource type="PackedScene" uid="uid://doy5abbhl7pi" path="res://Bach/objekter/prefabs/ice_stones/pre_ice_stones_1.tscn" id="7_puay2"]
+[ext_resource type="PackedScene" uid="uid://v5xocyunq5v1" path="res://Bach/objekter/is/is_sten_1.tscn" id="8_mxwsx"]
+
+[node name="Pre_Scene_1p" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0301552, 0)
+
+[node name="STEN_S_VÆG6" parent="." instance=ExtResource("1_8ug8y")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.13301, 1.67012, 4.83117)
+
+[node name="STEN_S_VÆG7" parent="STEN_S_VÆG6" instance=ExtResource("2_kqgh4")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.0553064, -0.011982, 5.53204)
+
+[node name="STEN_S_VÆG2" parent="STEN_S_VÆG6" instance=ExtResource("2_kqgh4")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8.56769, -0.0282713, -3.56074)
+
+[node name="STEN_S_VÆG" parent="STEN_S_VÆG6" instance=ExtResource("2_kqgh4")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8.74812, -0.0358713, 8.18004)
+
+[node name="STEN_S_VÆG3" parent="STEN_S_VÆG6" instance=ExtResource("1_8ug8y")]
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -11.5968, 0.145159, -0.396948)
+
+[node name="STEN_PORT" parent="STEN_S_VÆG6" instance=ExtResource("3_r8hb7")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.17523, 0.0974233, -3.80477)
+
+[node name="STEN_L_VÆG1" parent="STEN_S_VÆG6" instance=ExtResource("4_n30st")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.14141, -0.0850863, -3.216)
+
+[node name="STEN_S_VÆG4" parent="STEN_S_VÆG6" instance=ExtResource("1_8ug8y")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.28551, -0.0156288, 8.19899)
+
+[node name="STEN_S_VÆG5" parent="STEN_S_VÆG6" instance=ExtResource("2_kqgh4")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -11.5415, 0.133177, 5.13509)
+
+[node name="PreStone2" parent="." instance=ExtResource("5_n8h3j")]
+transform = Transform3D(0.58571, 0, -0.13017, 0, 0.6, 0, 0.13017, 0, 0.58571, 3.29724, 0.137115, -5.16696)
+
+[node name="PreStone3" parent="." instance=ExtResource("5_n8h3j")]
+transform = Transform3D(0.14537, 0, -0.137359, 0, 0.2, 0, 0.137359, 0, 0.14537, 3.65348, -0.0301552, 2.02588)
+
+[node name="PreStone" parent="." instance=ExtResource("6_gqi67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.33494, -0.0301552, -4.13772)
+
+[node name="PreStone4" parent="." instance=ExtResource("5_n8h3j")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -6.01623, -0.0301552, -2.62244)
+
+[node name="PreStone5" parent="." instance=ExtResource("6_gqi67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.065, -0.0301552, -0.786605)
+
+[node name="PreIceStones1" parent="." instance=ExtResource("7_puay2")]
+transform = Transform3D(0.947579, 0, 0.319522, 0, 1, 0, -0.319522, 0, 0.947579, -5.63789, -0.0301552, 3.15153)
+
+[node name="IS_STEN1" parent="." instance=ExtResource("8_mxwsx")]
+transform = Transform3D(0.320596, 0, -0.947216, 0, 1, 0, 0.947216, 0, 0.320596, 3.17361, 0.971686, 4.06733)
+
+[node name="IS_STEN2" parent="." instance=ExtResource("8_mxwsx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7079, 0.516784, -1.46733)

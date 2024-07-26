@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dey55hdha6yga"]
+
+[ext_resource type="PackedScene" uid="uid://bok5i3sn3ujn8" path="res://Bach/enemy/darugr/GLB/Draugr.glb" id="1_tq7sb"]
+
+[node name="Draugr" instance=ExtResource("1_tq7sb")]
+
+[node name="økse v" parent="rig/Skeleton3D" index="0"]
+transform = Transform3D(-8.14907e-10, 0.293945, -6.98492e-10, -0.00580199, -2.98023e-08, -0.014247, -0.014247, -2.23517e-08, 0.00580199, 0.12064, 0.582147, -0.95112)
+
+[node name="økse h" parent="rig/Skeleton3D" index="1"]
+transform = Transform3D(8.14907e-10, 0.293945, -3.49246e-09, -0.00572016, 8.56817e-08, 0.01428, 0.01428, 1.30385e-08, 0.00572016, 0.12064, 0.580388, 0.947209)

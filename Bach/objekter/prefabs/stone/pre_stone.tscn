@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhh88rh56rdit"]
+
+[ext_resource type="PackedScene" uid="uid://btwkawftmehxj" path="res://Bach/objekter/sten/sten_1.tscn" id="1_tjpen"]
+[ext_resource type="PackedScene" uid="uid://bdbopc5aq0p3w" path="res://Bach/objekter/sten/sten_2.tscn" id="2_fq800"]
+[ext_resource type="PackedScene" uid="uid://bc22rnyxd53ml" path="res://Bach/objekter/sten/sten_3.tscn" id="3_cln7w"]
+
+[node name="PreStone" type="Node3D"]
+
+[node name="STEN1" parent="." instance=ExtResource("1_tjpen")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.772612, 0)
+
+[node name="STEN5" parent="." instance=ExtResource("2_fq800")]
+transform = Transform3D(-0.0211569, 0, -0.299253, 0, 0.3, 0, 0.299253, 0, -0.0211569, -0.294291, 0.106596, -2.13963)
+
+[node name="STEN4" parent="." instance=ExtResource("2_fq800")]
+transform = Transform3D(-0.108368, 0, -0.385041, 0, 0.4, 0, 0.385041, 0, -0.108368, 1.51306, 0.206708, 0.124946)
+
+[node name="STEN2" parent="." instance=ExtResource("2_fq800")]
+transform = Transform3D(0.695549, 0, 0.718478, 0, 1, 0, -0.718478, 0, 0.695549, 1.48415, 0.646333, -1.77996)
+
+[node name="STEN3" parent="." instance=ExtResource("3_cln7w")]
+transform = Transform3D(0.893591, 0, -0.448882, 0, 1, 0, 0.448882, 0, 0.893591, -1.46273, 0.583245, -1.21241)

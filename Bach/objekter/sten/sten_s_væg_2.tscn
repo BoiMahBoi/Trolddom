@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnt3kdot74ixp"]
+
+[ext_resource type="PackedScene" uid="uid://cs5b2hajji7pf" path="res://Bach/objekter/sten/GLB/STEN_S_VÆG2.glb" id="1_m8eom"]
+
+[node name="STEN_S_VÆG2" instance=ExtResource("1_m8eom")]
