@@ -1,18 +1,24 @@
 extends Control
 
-var pages : Array = []
+@onready var equipment_page = %EquipmentPage
+
+var spell_pages = []
+var all_pages = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	update_page_arrays()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func next_page():
+	pass
+	
+func previous_page():
 	pass
 
-func update_page_array():
-	pages[0] = %EquipmentPage
-	pass
+func update_page_arrays():
+	spell_pages = %SpellPages.get_children()
+	all_pages.append(equipment_page)
+	all_pages += spell_pages
 
 func generate_page():
 	pass

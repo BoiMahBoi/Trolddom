@@ -225,12 +225,41 @@ text = "Curse Resistance: null"
 unique_name_in_owner = true
 
 [node name="Page1" type="Control" parent="Panel/SpellPages"]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="PanelContainer" type="PanelContainer" parent="Panel/SpellPages/Page1"]
+layout_mode = 0
+offset_left = 149.0
+offset_top = 71.0
+offset_right = 375.0
+offset_bottom = 135.0
+
+[node name="Page2" type="Control" parent="Panel/SpellPages"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Panel/SpellPages/Page2"]
+layout_mode = 0
+offset_left = 149.0
+offset_top = 71.0
+offset_right = 375.0
+offset_bottom = 135.0
+
+[node name="Page3" type="Control" parent="Panel/SpellPages"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Panel/SpellPages/Page3"]
 layout_mode = 0
 offset_left = 149.0
 offset_top = 71.0
