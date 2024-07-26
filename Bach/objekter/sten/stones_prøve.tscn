@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://cwr6vbmwa835u"]
+
+[ext_resource type="PackedScene" uid="uid://egbuq22tb04n" path="res://Bach/objekter/sten/stones_prøve.glb" id="1_qgr40"]
+[ext_resource type="Shader" path="res://Bach/shaders/stone_sharder.gdshader" id="2_jbjpf"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_n4gmq"]
+noise_type = 5
+frequency = 0.0152
+fractal_type = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_iqcge"]
+noise = SubResource("FastNoiseLite_n4gmq")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wjiat"]
+render_priority = 0
+shader = ExtResource("2_jbjpf")
+shader_parameter/start_color = Color(0.3358, 0.41032, 0.46, 1)
+shader_parameter/noise_tex = SubResource("NoiseTexture2D_iqcge")
+
+[node name="stones_prøve" instance=ExtResource("1_qgr40")]
+
+[node name="sten_1" parent="." index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_wjiat")

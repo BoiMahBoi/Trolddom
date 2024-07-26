@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2virjkbu54mh"]
+
+[ext_resource type="Shader" path="res://Bach/shader101/shader101.gdshader" id="1_mum55"]
+[ext_resource type="Texture2D" uid="uid://bkacwesc5gsr0" path="res://Bach/shader101/Screenshot 2024-07-16 120147.png" id="2_m4efv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jaajw"]
+shader = ExtResource("1_mum55")
+shader_parameter/my_color = Color(0.4964, 0.620987, 0.73, 1)
+
+[node name="Shader101" type="Node2D"]
+
+[node name="Screenshot2024-07-16120147" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_jaajw")
+position = Vector2(172, 102)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_m4efv")

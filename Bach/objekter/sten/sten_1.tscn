@@ -1,5 +1,37 @@
-[gd_scene load_steps=2 format=3 uid="uid://btwkawftmehxj"]
+[gd_scene load_steps=8 format=3 uid="uid://btwkawftmehxj"]
 
 [ext_resource type="PackedScene" uid="uid://cmc8n6dxfk2m2" path="res://Bach/objekter/sten/GLB/STEN1.glb" id="1_6qo7h"]
+[ext_resource type="Shader" path="res://Bach/shaders/stone_sharder.gdshader" id="2_kiwob"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_1tpxy"]
+seed = 5
+frequency = 0.0133
+domain_warp_amplitude = 10.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_11qr7"]
+in_3d_space = true
+seamless = true
+seamless_blend_skirt = 0.125
+noise = SubResource("FastNoiseLite_1tpxy")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_xaq1a"]
+noise_type = 2
+frequency = 0.0112
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_8vlnr"]
+seamless = true
+as_normal_map = true
+noise = SubResource("FastNoiseLite_xaq1a")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nv84l"]
+render_priority = 0
+shader = ExtResource("2_kiwob")
+shader_parameter/resolution = Vector2(600, 400)
+shader_parameter/start_color = null
+shader_parameter/noise_tex = SubResource("NoiseTexture2D_11qr7")
+shader_parameter/stone_normal = SubResource("NoiseTexture2D_8vlnr")
 
 [node name="STEN1" instance=ExtResource("1_6qo7h")]
+
+[node name="sten_2" parent="." index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_nv84l")
