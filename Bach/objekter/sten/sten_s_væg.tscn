@@ -1,5 +1,37 @@
-[gd_scene load_steps=2 format=3 uid="uid://ddk8r6q446gtd"]
+[gd_scene load_steps=9 format=3 uid="uid://ddk8r6q446gtd"]
 
 [ext_resource type="PackedScene" uid="uid://btnu80naetp8" path="res://Bach/objekter/sten/GLB/STEN_S_VÆG.glb" id="1_klqp7"]
+[ext_resource type="Shader" path="res://Bach/shaders/stone_sharder.gdshader" id="2_d6b8p"]
+[ext_resource type="Texture2D" uid="uid://cd3085egl2ln" path="res://Bach/maps/Screenshot 2024-07-26 205402.png" id="3_2a7il"]
+
+[sub_resource type="Gradient" id="Gradient_wn7ny"]
+offsets = PackedFloat32Array(0, 0.327869, 0.581967, 0.901639)
+colors = PackedColorArray(0.0459, 0.0479684, 0.17, 1, 0.0648, 0.07824, 0.18, 1, 0.1225, 0.294, 0.49, 1, 0.3465, 0.586483, 0.77, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vq56t"]
+gradient = SubResource("Gradient_wn7ny")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_xaq1a"]
+seed = 1
+frequency = 0.0322
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_8vlnr"]
+in_3d_space = true
+seamless = true
+seamless_blend_skirt = 0.041
+as_normal_map = true
+bump_strength = 2.3
+noise = SubResource("FastNoiseLite_xaq1a")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xdi2s"]
+render_priority = 0
+shader = ExtResource("2_d6b8p")
+shader_parameter/start_color = Color(0.4368, 0.500453, 0.56, 1)
+shader_parameter/stone_normal = SubResource("NoiseTexture2D_8vlnr")
+shader_parameter/gradient_texture = SubResource("GradientTexture2D_vq56t")
+shader_parameter/shape = ExtResource("3_2a7il")
 
 [node name="STEN_S_VÆG" instance=ExtResource("1_klqp7")]
+
+[node name="stor væg1" parent="." index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_xdi2s")
