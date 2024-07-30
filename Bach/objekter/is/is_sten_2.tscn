@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cy5crklwkagrj" path="res://Bach/objekter/sten/GLB/IS_STEN2.glb" id="1_5m2hf"]
 [ext_resource type="Shader" path="res://Bach/shaders/ice.gdshader" id="2_7l5p5"]
-[ext_resource type="Texture2D" uid="uid://c74shra46yus5" path="res://Bach/maps/Screenshot 2024-07-26 210821.png" id="3_ng11y"]
+[ext_resource type="Texture2D" uid="uid://cd3085egl2ln" path="res://Bach/maps/Screenshot 2024-07-26 205402.png" id="3_6jkip"]
 
 [sub_resource type="Gradient" id="Gradient_gdndp"]
 colors = PackedColorArray(0.1653, 0.4351, 0.57, 1, 0.71, 0.9855, 1, 0.796078)
@@ -21,7 +21,7 @@ shader = ExtResource("2_7l5p5")
 shader_parameter/start_color = Color(0.692463, 0.893502, 0.843656, 1)
 shader_parameter/stone_normal = SubResource("NoiseTexture2D_ekbak")
 shader_parameter/gradient_texture = SubResource("GradientTexture2D_qdob3")
-shader_parameter/shape = ExtResource("3_ng11y")
+shader_parameter/shape = ExtResource("3_6jkip")
 
 [node name="IS_STEN2" instance=ExtResource("1_5m2hf")]
 
