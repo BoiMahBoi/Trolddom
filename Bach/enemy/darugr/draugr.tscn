@@ -1,6 +1,60 @@
-[gd_scene load_steps=2 format=3 uid="uid://dey55hdha6yga"]
+[gd_scene load_steps=12 format=3 uid="uid://dey55hdha6yga"]
 
 [ext_resource type="PackedScene" uid="uid://bok5i3sn3ujn8" path="res://Bach/enemy/darugr/GLB/Draugr.glb" id="1_tq7sb"]
+[ext_resource type="Shader" path="res://Bach/shaders/draugr_hair.gdshader" id="2_5ttvn"]
+
+[sub_resource type="Gradient" id="Gradient_60y04"]
+colors = PackedColorArray(0.0376, 0.18894, 0.47, 1, 0.43, 0.734, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_bmkq6"]
+frequency = 0.0197
+fractal_type = 3
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_8ww61"]
+seamless = true
+color_ramp = SubResource("Gradient_60y04")
+noise = SubResource("FastNoiseLite_bmkq6")
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ynog0"]
+color_ramp = SubResource("Gradient_60y04")
+noise = SubResource("FastNoiseLite_bmkq6")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_t5w3k"]
+frequency = 0.0013
+fractal_type = 2
+fractal_octaves = 8
+fractal_lacunarity = 3.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_c7eck"]
+seamless = true
+seamless_blend_skirt = 0.688
+bump_strength = 4.2
+noise = SubResource("FastNoiseLite_t5w3k")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_13vcn"]
+seed = 1
+frequency = 0.0013
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_6wt8k"]
+seamless = true
+as_normal_map = true
+bump_strength = 3.9
+noise = SubResource("FastNoiseLite_13vcn")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_50yuh"]
+render_priority = 0
+shader = ExtResource("2_5ttvn")
+shader_parameter/albino = Color(0.3404, 0.88136, 0.92, 1)
+shader_parameter/death_color = Color(0.2294, 0.332507, 0.37, 1)
+shader_parameter/death_pct = 0.0
+shader_parameter/direction1 = Vector2(-1, 1)
+shader_parameter/direction2 = Vector2(0, -1)
+shader_parameter/scroll_speed = 0.005
+shader_parameter/scroll_speed2 = 0.005
+shader_parameter/normalmap_tex = SubResource("NoiseTexture2D_c7eck")
+shader_parameter/normalmap_tex2 = SubResource("NoiseTexture2D_6wt8k")
+shader_parameter/color_noise = SubResource("NoiseTexture2D_8ww61")
+shader_parameter/color_noise2 = SubResource("NoiseTexture2D_ynog0")
 
 [node name="Draugr" instance=ExtResource("1_tq7sb")]
 
@@ -9,3 +63,6 @@ transform = Transform3D(-8.14907e-10, 0.293945, -6.98492e-10, -0.00580199, -2.98
 
 [node name="økse h" parent="rig/Skeleton3D" index="1"]
 transform = Transform3D(8.14907e-10, 0.293945, -3.49246e-09, -0.00572016, 8.56817e-08, 0.01428, 0.01428, 1.30385e-08, 0.00572016, 0.12064, 0.580388, 0.947209)
+
+[node name="Draugr_bacis" parent="rig/Skeleton3D" index="2"]
+surface_material_override/1 = SubResource("ShaderMaterial_50yuh")
