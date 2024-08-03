@@ -1,6 +1,6 @@
 [gd_resource type="VisualShader" load_steps=23 format=3 uid="uid://berh82wgat362"]
 
-[ext_resource type="Texture2D" uid="uid://dv3wnedp43yf" path="res://Bach/objekter/vfx/fire_texture.jpg" id="1_bxjcl"]
+[ext_resource type="Texture2D" uid="uid://dv3wnedp43yf" path="res://Bach/objekter/vfx/texture/fire_texture.jpg" id="1_6g14r"]
 [ext_resource type="Texture2D" uid="uid://b1k5yfs2eiyr" path="res://Bach/objekter/vfx/texture/fire_distrotion.jpg" id="2_teq21"]
 
 [sub_resource type="VisualShaderNodeVectorDecompose" id="VisualShaderNodeVectorDecompose_x58pv"]
@@ -43,7 +43,7 @@ default_input_values = [1, Vector2(2, 1), 2, Vector2(0, 0)]
 input_name = "color"
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_x7xum"]
-texture = ExtResource("1_bxjcl")
+texture = ExtResource("1_6g14r")
 
 [sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_rlubs"]
 default_input_values = [0, 0.0, 1, 1.2]
@@ -188,7 +188,7 @@ void fragment() {
 
 }
 "
-graph_offset = Vector2(-963.336, 43.8602)
+graph_offset = Vector2(-826.94, -205.778)
 modes/cull = 2
 flags/unshaded = true
 nodes/vertex/0/position = Vector2(1380, 120)

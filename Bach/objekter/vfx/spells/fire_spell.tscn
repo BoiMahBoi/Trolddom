@@ -1,0 +1,52 @@
+[gd_scene load_steps=10 format=3 uid="uid://bh7nhvi8gx3i3"]
+
+[ext_resource type="Shader" uid="uid://ct55xf4r0wnfp" path="res://Bach/shaders/fire_spell.tres" id="1_xmk8v"]
+[ext_resource type="ArrayMesh" uid="uid://dxeqonx2xkdhm" path="res://Bach/objekter/vfx/mesh/fireball_mesh.obj" id="2_hg6n3"]
+[ext_resource type="Shader" uid="uid://b5sg6s8rfi41x" path="res://Bach/shaders/fire_spell_header.tres" id="3_ksmc7"]
+[ext_resource type="Shader" uid="uid://cwwo71yopoqen" path="res://Bach/shaders/fire_spell_trail.tres" id="4_5ub3f"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_js035"]
+render_priority = 2
+shader = ExtResource("1_xmk8v")
+shader_parameter/ColorParameter = Color(4, 0.8, 0.3, 1)
+shader_parameter/Vector2Parameter = Vector2(0, -2)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a4oso"]
+render_priority = 1
+shader = ExtResource("3_ksmc7")
+shader_parameter/color = Color(0.75, 0.266, 0.09, 1)
+shader_parameter/FloatParameter = 2.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_g17wl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bqpyp"]
+render_priority = 0
+shader = ExtResource("4_5ub3f")
+shader_parameter/speed = Vector2(0, 1)
+shader_parameter/ColorParameter = Color(0.76, 0.0841067, 0.0608, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_tumoo"]
+
+[node name="FireSpell" type="Node3D"]
+
+[node name="FireballMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+material_override = SubResource("ShaderMaterial_js035")
+mesh = ExtResource("2_hg6n3")
+
+[node name="fire_header" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0.0897013)
+material_override = SubResource("ShaderMaterial_a4oso")
+mesh = SubResource("SphereMesh_g17wl")
+
+[node name="trail_mash2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.77778e-15, 1.17267e-07, -0.8, 0.930443, -1.17267e-07, 0, -4.0671e-08, -2.68275, -3.49691e-08, 0.00108099, 0.00881204, -0.877863)
+material_override = SubResource("ShaderMaterial_bqpyp")
+mesh = SubResource("QuadMesh_tumoo")
+skeleton = NodePath("../fire_header")
+
+[node name="trail_mash3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.930443, 2.34534e-07, 3.49691e-08, -4.0671e-08, 5.1259e-15, -0.8, -8.13419e-08, -2.68275, 1.52855e-15, 0, 0, -0.877916)
+material_override = SubResource("ShaderMaterial_bqpyp")
+mesh = SubResource("QuadMesh_tumoo")
+skeleton = NodePath("../fire_header")
