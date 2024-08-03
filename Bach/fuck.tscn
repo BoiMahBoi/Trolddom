@@ -1,7 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://gckokj7yhner"]
+[gd_scene load_steps=5 format=3 uid="uid://gckokj7yhner"]
 
 [ext_resource type="PackedScene" uid="uid://bok5i3sn3ujn8" path="res://Bach/enemy/darugr/GLB/Draugr.glb" id="1_ujdf5"]
+[ext_resource type="PackedScene" uid="uid://bglkpv1bngaa7" path="res://Bach/objekter/vfx/fire.tscn" id="2_ruf0k"]
+
+[sub_resource type="Environment" id="Environment_jueri"]
+glow_enabled = true
+glow_intensity = 0.48
+glow_strength = 1.04
+glow_blend_mode = 1
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_o6sdm"]
 
 [node name="Fuck" type="MeshInstance3D"]
 
 [node name="Draugr" parent="." instance=ExtResource("1_ujdf5")]
+
+[node name="fire" parent="." instance=ExtResource("2_ruf0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.700114, 0, 1.94142)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jueri")
+camera_attributes = SubResource("CameraAttributesPractical_o6sdm")

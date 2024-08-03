@@ -1,19 +1,67 @@
-[gd_scene load_steps=4 format=3 uid="uid://bglkpv1bngaa7"]
+[gd_scene load_steps=12 format=3 uid="uid://bglkpv1bngaa7"]
 
 [ext_resource type="Shader" uid="uid://berh82wgat362" path="res://Bach/shaders/fire.tres" id="1_8020g"]
+[ext_resource type="Shader" uid="uid://cv1w2j700rbed" path="res://Bach/shaders/smoke.tres" id="2_qmtr6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qbcis"]
 render_priority = 0
 shader = ExtResource("1_8020g")
+shader_parameter/speed = Vector2(0, 1)
 
 [sub_resource type="QuadMesh" id="QuadMesh_nbv8h"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_aqk3r"]
+render_priority = 0
+shader = ExtResource("2_qmtr6")
+
+[sub_resource type="Gradient" id="Gradient_vyvwf"]
+offsets = PackedFloat32Array(0, 0.490909, 1)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_aswni"]
+gradient = SubResource("Gradient_vyvwf")
+
+[sub_resource type="Curve" id="Curve_u8q2s"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.318681), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_gfvna"]
+curve = SubResource("Curve_u8q2s")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_no3sf"]
+emission_shape = 1
+emission_sphere_radius = 0.2
+angle_min = -120.0
+angle_max = 90.0
+angular_velocity_min = -180.0
+angular_velocity_max = 180.0
+gravity = Vector3(0, 5, 0)
+damping_min = 1.5
+damping_max = 2.2
+scale_min = 0.5
+scale_max = 1.2
+scale_curve = SubResource("CurveTexture_gfvna")
+color = Color(1.18, 0.66, 0.5, 1)
+color_ramp = SubResource("GradientTexture1D_aswni")
+
+[sub_resource type="QuadMesh" id="QuadMesh_db6vv"]
+
 [node name="fire" type="Node3D"]
 
-[node name="CPUParticles3D" type="CPUParticles3D" parent="."]
+[node name="fire" type="CPUParticles3D" parent="."]
 transform = Transform3D(0.937349, -0.348392, 0, 0.348392, 0.937349, 0, 0, 0, 1, 0, 0, 0)
+sorting_offset = 2.0
 material_override = SubResource("ShaderMaterial_qbcis")
 amount = 1
 mesh = SubResource("QuadMesh_nbv8h")
 gravity = Vector3(0, 0, 0)
 color = Color(4, 0.8, 0, 1)
+
+[node name="smoke" type="GPUParticles3D" parent="."]
+material_override = SubResource("ShaderMaterial_aqk3r")
+amount = 15
+lifetime = 1.6
+randomness = 0.1
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_no3sf")
+draw_pass_1 = SubResource("QuadMesh_db6vv")
