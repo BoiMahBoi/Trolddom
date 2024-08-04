@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://bh7nhvi8gx3i3"]
+[gd_scene load_steps=21 format=3 uid="uid://bh7nhvi8gx3i3"]
 
 [ext_resource type="Shader" uid="uid://ct55xf4r0wnfp" path="res://Bach/shaders/fire_spell.tres" id="1_xmk8v"]
 [ext_resource type="ArrayMesh" uid="uid://dxeqonx2xkdhm" path="res://Bach/objekter/vfx/mesh/fireball_mesh.obj" id="2_hg6n3"]
 [ext_resource type="Shader" uid="uid://b5sg6s8rfi41x" path="res://Bach/shaders/fire_spell_header.tres" id="3_ksmc7"]
 [ext_resource type="Shader" uid="uid://cwwo71yopoqen" path="res://Bach/shaders/fire_spell_trail.tres" id="4_5ub3f"]
+[ext_resource type="Shader" uid="uid://btt8t2ixfr7b4" path="res://Bach/shaders/sparks.tres" id="5_o6q18"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_js035"]
 render_priority = 2
@@ -19,13 +20,66 @@ shader_parameter/FloatParameter = 2.0
 
 [sub_resource type="SphereMesh" id="SphereMesh_g17wl"]
 
+[sub_resource type="Gradient" id="Gradient_1qigu"]
+offsets = PackedFloat32Array(0, 0.339506, 0.691358, 1)
+colors = PackedColorArray(0.49, 0.0882, 0.0882, 1, 0.38, 0.019, 0, 1, 0.94, 0.540187, 0.1128, 1, 0.88, 0.88, 0.1936, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kydn7"]
+gradient = SubResource("Gradient_1qigu")
+
+[sub_resource type="Gradient" id="Gradient_moob8"]
+offsets = PackedFloat32Array(0.158088, 0.580882)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0xbgh"]
+gradient = SubResource("Gradient_moob8")
+fill_from = Vector2(1, 0)
+fill_to = Vector2(1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_tktmp"]
+gradient = SubResource("Gradient_moob8")
+fill_from = Vector2(1, 0)
+fill_to = Vector2(1, 1)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bqpyp"]
 render_priority = 0
 shader = ExtResource("4_5ub3f")
 shader_parameter/speed = Vector2(0, 1)
 shader_parameter/ColorParameter = Color(0.76, 0.0841067, 0.0608, 1)
+shader_parameter/control_area = SubResource("GradientTexture2D_0xbgh")
+shader_parameter/Texture2DParameter = SubResource("GradientTexture2D_kydn7")
+shader_parameter/fade = SubResource("GradientTexture2D_tktmp")
 
 [sub_resource type="QuadMesh" id="QuadMesh_tumoo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_voo50"]
+render_priority = 0
+shader = ExtResource("5_o6q18")
+
+[sub_resource type="Curve" id="Curve_1gta0"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_vykig"]
+curve = SubResource("Curve_1gta0")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7ue7q"]
+particle_flag_align_y = true
+emission_shape = 2
+emission_sphere_radius = 0.5
+direction = Vector3(-1, 0, 0)
+spread = 0.0
+initial_velocity_min = 3.0
+initial_velocity_max = 8.0
+radial_velocity_min = 1.0
+radial_velocity_max = 2.0
+gravity = Vector3(0, 0, 0)
+scale_max = 1.5
+scale_curve = SubResource("CurveTexture_vykig")
+color = Color(2, 1.3, 0.5, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_hdv0c"]
+size = Vector2(0.1, 0.5)
 
 [node name="FireSpell" type="Node3D"]
 
@@ -40,13 +94,23 @@ material_override = SubResource("ShaderMaterial_a4oso")
 mesh = SubResource("SphereMesh_g17wl")
 
 [node name="trail_mash2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.77778e-15, 1.17267e-07, -0.8, 0.930443, -1.17267e-07, 0, -4.0671e-08, -2.68275, -3.49691e-08, 0.00108099, 0.00881204, -0.877863)
+transform = Transform3D(1.77778e-15, 1.17267e-07, -0.8, 0.930443, -1.17267e-07, 0, -4.0671e-08, -2.68275, -3.49691e-08, 0.00108099, 0.00881204, -0.936547)
 material_override = SubResource("ShaderMaterial_bqpyp")
 mesh = SubResource("QuadMesh_tumoo")
 skeleton = NodePath("../fire_header")
 
 [node name="trail_mash3" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.930443, 2.34534e-07, 3.49691e-08, -4.0671e-08, 5.1259e-15, -0.8, -8.13419e-08, -2.68275, 1.52855e-15, 0, 0, -0.877916)
+transform = Transform3D(-0.930443, 2.34534e-07, 3.49691e-08, -4.0671e-08, 5.1259e-15, -0.8, -8.13419e-08, -2.68275, 1.52855e-15, 0, 0, -0.9366)
 material_override = SubResource("ShaderMaterial_bqpyp")
 mesh = SubResource("QuadMesh_tumoo")
 skeleton = NodePath("../fire_header")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, -0.342406)
+material_override = SubResource("ShaderMaterial_voo50")
+amount = 10
+lifetime = 0.3
+explosiveness = 0.4
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_7ue7q")
+draw_pass_1 = SubResource("QuadMesh_hdv0c")

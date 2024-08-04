@@ -33,7 +33,7 @@ keep_scale = true
 
 [resource]
 code = "shader_type spatial;
-render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_schlick_ggx;
+render_mode blend_mix, depth_draw_opaque, cull_disabled, diffuse_lambert, specular_schlick_ggx, unshaded, shadows_disabled, ambient_light_disabled, fog_disabled;
 
 uniform sampler2D tex_frg_8;
 
@@ -97,7 +97,12 @@ void fragment() {
 
 }
 "
-graph_offset = Vector2(-606, -41)
+graph_offset = Vector2(-855.994, -41.6457)
+modes/cull = 2
+flags/unshaded = true
+flags/shadows_disabled = true
+flags/ambient_light_disabled = true
+flags/fog_disabled = true
 nodes/vertex/2/node = SubResource("VisualShaderNodeBillboard_0djcj")
 nodes/vertex/2/position = Vector2(40, 260)
 nodes/vertex/connections = PackedInt32Array(2, 0, 0, 10)
@@ -105,7 +110,7 @@ nodes/fragment/0/position = Vector2(500, 160)
 nodes/fragment/2/node = SubResource("VisualShaderNodeInput_dbm2i")
 nodes/fragment/2/position = Vector2(-640, 220)
 nodes/fragment/3/node = SubResource("VisualShaderNodeInput_bx85n")
-nodes/fragment/3/position = Vector2(-640, 440)
+nodes/fragment/3/position = Vector2(-440, 420)
 nodes/fragment/4/node = SubResource("VisualShaderNodeVectorOp_l44ov")
 nodes/fragment/4/position = Vector2(200, 120)
 nodes/fragment/5/node = SubResource("VisualShaderNodeVectorDecompose_xyxy3")
@@ -115,5 +120,5 @@ nodes/fragment/6/position = Vector2(0, 500)
 nodes/fragment/7/node = SubResource("VisualShaderNodeFloatOp_1ppyi")
 nodes/fragment/7/position = Vector2(200, 280)
 nodes/fragment/8/node = SubResource("VisualShaderNodeTexture_imgf0")
-nodes/fragment/8/position = Vector2(-260, 100)
+nodes/fragment/8/position = Vector2(-240, 140)
 nodes/fragment/connections = PackedInt32Array(2, 0, 8, 0, 3, 0, 4, 0, 8, 0, 4, 1, 8, 0, 5, 0, 3, 0, 6, 0, 6, 3, 7, 0, 5, 0, 7, 1, 7, 0, 0, 1, 4, 0, 0, 0)
