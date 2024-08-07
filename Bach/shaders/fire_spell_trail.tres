@@ -193,7 +193,6 @@ void fragment() {
 	vec4 n_out20p0;
 // Texture2D:20
 	n_out20p0 = texture(Texture2DParameter, vec2(n_out3p0.xy));
-	float n_out20p4 = n_out20p0.a;
 
 
 	vec4 n_out22p0;
@@ -225,7 +224,6 @@ void fragment() {
 
 }
 "
-graph_offset = Vector2(-970.213, -115.928)
 modes/cull = 2
 flags/unshaded = true
 flags/shadows_disabled = true
