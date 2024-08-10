@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://de2eoyf51e3d4"]
+[gd_scene load_steps=12 format=3 uid="uid://de2eoyf51e3d4"]
 
 [ext_resource type="Shader" path="res://Bach/shaders/stone_sharder.gdshader" id="1_24dx5"]
 [ext_resource type="Texture2D" uid="uid://cd3085egl2ln" path="res://Bach/maps/Screenshot 2024-07-26 205402.png" id="2_vfd3k"]
@@ -43,9 +43,32 @@ shader_parameter/stone_normal2 = SubResource("NoiseTexture2D_scr6r")
 shader_parameter/gradient_texture = SubResource("GradientTexture2D_vq56t")
 shader_parameter/shape = ExtResource("2_vfd3k")
 
+[sub_resource type="FontFile" id="FontFile_1ra12"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
 [node name="Stone1" type="Node3D"]
 
 [node name="StonesPrøve2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0193255, 1.33207, 2.86587)
 material_override = SubResource("ShaderMaterial_spaq4")
 mesh = ExtResource("3_c6tf2")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="MarginContainer" type="MarginContainer" parent="TextEdit"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="TextEdit/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontFile_1ra12")
+text = "sadasd"
