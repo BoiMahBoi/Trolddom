@@ -17,7 +17,7 @@ void fragment() {
 	float greyscale= (color.r + color.g + color.b)/3.0;
 	vec2 sample_coords = vec2 (greyscale);
 	vec4 gradient_color = texture(gradient_texture, sample_coords);
-	vec3 final_color = mix (gradient_color.rgb, start_color, 0.7);
+	vec3 final_color = mix (gradient_color.rgb, start_color, 0.9);
 	ALBEDO = final_color.rgb;
 	
 	//texture

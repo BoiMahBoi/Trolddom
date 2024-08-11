@@ -5,7 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://cd3085egl2ln" path="res://Bach/maps/Screenshot 2024-07-26 205402.png" id="3_wog4p"]
 
 [sub_resource type="Gradient" id="Gradient_wn7ny"]
-colors = PackedColorArray(0.1053, 0.18765, 0.27, 1, 0.3328, 0.47008, 0.52, 1)
+offsets = PackedFloat32Array(0.00735294, 1)
+colors = PackedColorArray(0.1739, 0.27195, 0.37, 1, 0.1972, 0.47792, 0.58, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_vq56t"]
 gradient = SubResource("Gradient_wn7ny")
@@ -33,7 +34,7 @@ seamless = true
 as_normal_map = true
 noise = SubResource("FastNoiseLite_awoax")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_6nf16"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_prfl1"]
 render_priority = 0
 shader = ExtResource("2_fpsg2")
 shader_parameter/texture_str = 0.3
@@ -46,4 +47,4 @@ shader_parameter/shape = ExtResource("3_wog4p")
 [node name="STEN_PORT" instance=ExtResource("1_la1fe")]
 
 [node name="indgang" parent="." index="0"]
-surface_material_override/0 = SubResource("ShaderMaterial_6nf16")
+surface_material_override/0 = SubResource("ShaderMaterial_prfl1")
