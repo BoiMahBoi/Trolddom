@@ -5,7 +5,7 @@ uniform sampler2D stone_normal2: repeat_enable, filter_linear;
 uniform sampler2D gradient_texture;
 uniform sampler2D shape: repeat_enable, filter_linear_mipmap;
 
-uniform float texture_str: hint_range(0.0, 1.0, 0.3);
+uniform float texture_str: hint_range(0.0, 1.0);
 uniform vec3 start_color: source_color;
 
 void vertex() {
@@ -25,7 +25,7 @@ void fragment() {
 	vec3 noise_normal_mix = mix(uv_texture2, NORMAL, 0.2);
 	vec3 noise_texture_mix = mix(noise_normal_mix, uv_texture, 0.2);
 	float color_noise = noise_texture_mix.r;
-	vec2 uv_mix = mix(UV, noise_texture_mix.rg,0.05);
+	vec2 uv_mix = mix(UV, noise_texture_mix.rg,0.03);
 	//making refrends
  	vec4 greycolor = texture(shape, uv_mix);
 	//mix the color with texture

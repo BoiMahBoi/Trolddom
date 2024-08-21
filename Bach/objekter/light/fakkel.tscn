@@ -1,0 +1,142 @@
+[gd_scene load_steps=24 format=3 uid="uid://b3nwj1hn3ulld"]
+
+[ext_resource type="ArrayMesh" uid="uid://dgfylepqlwkl7" path="res://Bach/objekter/light/fakkel.obj" id="1_x6jsa"]
+[ext_resource type="Shader" path="res://Bach/shaders/fakkel.gdshader" id="2_p03xd"]
+[ext_resource type="Texture2D" uid="uid://bfny4a6848p7b" path="res://Bach/objekter/light/fakkel_color_texture.png" id="3_deenb"]
+[ext_resource type="Shader" uid="uid://berh82wgat362" path="res://Bach/shaders/fire.tres" id="4_20460"]
+[ext_resource type="Shader" uid="uid://cv1w2j700rbed" path="res://Bach/shaders/smoke.tres" id="5_40ugv"]
+[ext_resource type="Shader" uid="uid://btt8t2ixfr7b4" path="res://Bach/shaders/sparks.tres" id="6_n7ug5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kag53"]
+render_priority = 0
+shader = ExtResource("2_p03xd")
+shader_parameter/tex = ExtResource("3_deenb")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b5xf6"]
+render_priority = 0
+shader = ExtResource("4_20460")
+shader_parameter/speed = Vector2(0, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_2a4c7"]
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_820i0"]
+render_priority = 0
+shader = ExtResource("5_40ugv")
+
+[sub_resource type="Gradient" id="Gradient_akk55"]
+offsets = PackedFloat32Array(0, 0.490909, 1)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_aswni"]
+gradient = SubResource("Gradient_akk55")
+
+[sub_resource type="Curve" id="Curve_0emuq"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.318681), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_gfvna"]
+curve = SubResource("Curve_0emuq")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1fodq"]
+emission_shape = 1
+emission_sphere_radius = 0.1
+angular_velocity_min = -180.0
+angular_velocity_max = 180.0
+gravity = Vector3(0, 5, 0)
+damping_min = 1.5
+damping_max = 2.532
+scale_min = 0.5
+scale_max = 1.2
+scale_curve = SubResource("CurveTexture_gfvna")
+color = Color(1.18, 0.66, 0.5, 1)
+color_ramp = SubResource("GradientTexture1D_aswni")
+
+[sub_resource type="QuadMesh" id="QuadMesh_gk86o"]
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6bx5e"]
+render_priority = 0
+shader = ExtResource("6_n7ug5")
+
+[sub_resource type="Curve" id="Curve_pwo6c"]
+min_value = -200.0
+max_value = 200.0
+_data = [Vector2(0.0144928, 76.9231), 0.0, 0.0, 0, 0, Vector2(1, -41.7582), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_2p3yw"]
+curve = SubResource("Curve_pwo6c")
+
+[sub_resource type="Curve" id="Curve_rghyk"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.747253), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_klh5h"]
+curve = SubResource("Curve_rghyk")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_njyd8"]
+emission_shape = 1
+emission_sphere_radius = 0.2
+angular_velocity_min = -180.0
+angular_velocity_max = 180.0
+gravity = Vector3(0, 15, 0)
+linear_accel_min = 0.5
+linear_accel_max = 1.2
+linear_accel_curve = SubResource("CurveTexture_2p3yw")
+damping_min = 0.145
+damping_max = 15.818
+scale_min = 0.5
+scale_max = 1.2
+scale_curve = SubResource("CurveTexture_klh5h")
+color = Color(4, 0.8, 0.3, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_pboyx"]
+size = Vector2(0.04, 0.04)
+
+[node name="Fakkel" type="Node3D"]
+
+[node name="Fakkel" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, 0.035, 0, 0, 0, 0.035, -0.0210869, 0, 0.00200045)
+mesh = ExtResource("1_x6jsa")
+surface_material_override/0 = SubResource("ShaderMaterial_kag53")
+
+[node name="fire" type="CPUParticles3D" parent="."]
+transform = Transform3D(0.937349, -0.348392, 0, 0.348392, 0.937349, 0, 0, 0, 1, -0.151065, 0.465926, -0.000358522)
+layers = 2
+sorting_offset = 10.0
+material_override = SubResource("ShaderMaterial_b5xf6")
+amount = 1
+mesh = SubResource("QuadMesh_2a4c7")
+gravity = Vector3(0, 0, 0)
+color = Color(4, 0.8, 0, 1)
+
+[node name="smoke" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.136579, 0.340893, -0.000358522)
+material_override = SubResource("ShaderMaterial_820i0")
+amount = 22
+lifetime = 1.6
+randomness = 0.1
+fixed_fps = 60
+trail_lifetime = 0.2
+process_material = SubResource("ParticleProcessMaterial_1fodq")
+draw_pass_1 = SubResource("QuadMesh_gk86o")
+
+[node name="sparks" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.188303, 0.41861, -0.000388652)
+material_override = SubResource("ShaderMaterial_6bx5e")
+amount = 10
+lifetime = 0.2
+speed_scale = 0.4
+randomness = 0.1
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_njyd8")
+draw_pass_1 = SubResource("QuadMesh_pboyx")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.146159, 0.366918, 0)
+light_color = Color(1, 0.566667, 0.35, 1)
+light_energy = 1.5
+light_volumetric_fog_energy = 11.185
+omni_range = 3.937
+omni_shadow_mode = 0
