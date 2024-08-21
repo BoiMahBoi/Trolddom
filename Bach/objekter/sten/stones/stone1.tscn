@@ -1,8 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://de2eoyf51e3d4"]
+[gd_scene load_steps=19 format=3 uid="uid://de2eoyf51e3d4"]
 
 [ext_resource type="Shader" path="res://Bach/shaders/stone_sharder.gdshader" id="1_24dx5"]
 [ext_resource type="Texture2D" uid="uid://cd3085egl2ln" path="res://Bach/maps/Screenshot 2024-07-26 205402.png" id="2_vfd3k"]
 [ext_resource type="ArrayMesh" uid="uid://dxd4mhqia4l75" path="res://Bach/objekter/sten/stones/stones_prøve2.obj" id="3_c6tf2"]
+[ext_resource type="Shader" path="res://Bach/shaders/fire_text.gdshader" id="4_y2imh"]
+[ext_resource type="Texture2D" uid="uid://c06auprhmgld6" path="res://Bach/objekter/vfx/texture/T_VFX_Noi55.png" id="5_suyje"]
+[ext_resource type="FontFile" uid="uid://c41ghss5vr5o" path="res://Bach/textfont/FirecatMedium-ALep.ttf" id="6_gqxd1"]
+[ext_resource type="Texture2D" uid="uid://b1k5yfs2eiyr" path="res://Bach/objekter/vfx/texture/fire_distrotion.jpg" id="6_wndsj"]
 
 [sub_resource type="Gradient" id="Gradient_wn7ny"]
 colors = PackedColorArray(0.1053, 0.18765, 0.27, 1, 0.3328, 0.47008, 0.52, 1)
@@ -43,13 +47,36 @@ shader_parameter/stone_normal2 = SubResource("NoiseTexture2D_scr6r")
 shader_parameter/gradient_texture = SubResource("GradientTexture2D_vq56t")
 shader_parameter/shape = ExtResource("2_vfd3k")
 
-[sub_resource type="FontFile" id="FontFile_1ra12"]
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+[sub_resource type="Gradient" id="Gradient_mtij6"]
+offsets = PackedFloat32Array(0, 0.441176, 0.702206, 0.827206)
+colors = PackedColorArray(0.108, 0, 0.54, 1, 0, 0.6, 1, 1, 0, 1, 0.983333, 1, 0.29, 1, 0.8935, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0b2hp"]
+gradient = SubResource("Gradient_mtij6")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c2v18"]
+render_priority = 0
+shader = ExtResource("4_y2imh")
+shader_parameter/scroll = Vector2(0.2, 0.2)
+shader_parameter/scroll2 = Vector2(-0.3, 0.2)
+shader_parameter/noiseScale = Vector2(1, 1)
+shader_parameter/noiseScale2 = Vector2(1, 1)
+shader_parameter/blur = 3.0
+shader_parameter/base_intensity = 0.1
+shader_parameter/intensity_factor = 1.5
+shader_parameter/fire_noise = ExtResource("5_suyje")
+shader_parameter/vobing_tex = ExtResource("6_wndsj")
+shader_parameter/tone_mapping = SubResource("GradientTexture2D_0b2hp")
+
+[sub_resource type="TextMesh" id="TextMesh_ryuvw"]
+text = "fireball
+fuck yes 
+use tahe shit"
+font = ExtResource("6_gqxd1")
+font_size = 12
+uppercase = true
+autowrap_mode = 2
+depth = 0.005
 
 [node name="Stone1" type="Node3D"]
 
@@ -58,17 +85,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0193255, 1.33207, 2.86587)
 material_override = SubResource("ShaderMaterial_spaq4")
 mesh = ExtResource("3_c6tf2")
 
-[node name="TextEdit" type="TextEdit" parent="."]
-offset_right = 8.0
-offset_bottom = 8.0
-
-[node name="MarginContainer" type="MarginContainer" parent="TextEdit"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="TextEdit/MarginContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("FontFile_1ra12")
-text = "sadasd"
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.692675, 1.51874, 0.0109645)
+material_override = SubResource("ShaderMaterial_c2v18")
+cast_shadow = 0
+mesh = SubResource("TextMesh_ryuvw")

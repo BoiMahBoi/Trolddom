@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://br7ldpsv8egfe"]
+
+[ext_resource type="Texture2D" uid="uid://b2qxp38iyahfb" path="res://Bach/objekter/chest/kiste_metal_texture.png" id="1_utq74"]
+
+[resource]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_texture = ExtResource("1_utq74")
+roughness = 0.5
+grow_amount = -0.711

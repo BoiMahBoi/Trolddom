@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dyqo7lpkhafyf"]
+[gd_scene load_steps=22 format=3 uid="uid://dyqo7lpkhafyf"]
 
 [ext_resource type="PackedScene" uid="uid://cnt3kdot74ixp" path="res://Bach/objekter/sten/sten_s_væg_2.tscn" id="1_62cl5"]
 [ext_resource type="PackedScene" uid="uid://ddk8r6q446gtd" path="res://Bach/objekter/sten/sten_s_væg.tscn" id="2_inhbc"]
@@ -8,11 +8,60 @@
 [ext_resource type="PackedScene" uid="uid://dhh88rh56rdit" path="res://Bach/objekter/prefabs/stone/pre_stone.tscn" id="6_liuma"]
 [ext_resource type="PackedScene" uid="uid://doy5abbhl7pi" path="res://Bach/objekter/prefabs/ice_stones/pre_ice_stones_1.tscn" id="7_pw4fb"]
 [ext_resource type="PackedScene" uid="uid://v5xocyunq5v1" path="res://Bach/objekter/is/is_sten_1.tscn" id="8_p45wk"]
+[ext_resource type="PackedScene" uid="uid://b3nwj1hn3ulld" path="res://Bach/objekter/light/fakkel.tscn" id="9_orwvm"]
+[ext_resource type="Shader" path="res://Bach/shaders/stone_sharder.gdshader" id="10_1cyww"]
+[ext_resource type="Texture2D" uid="uid://cd3085egl2ln" path="res://Bach/maps/Screenshot 2024-07-26 205402.png" id="11_wn6bk"]
+[ext_resource type="PackedScene" uid="uid://cxdvmybi55w4t" path="res://Bach/objekter/is/is_sten_2.tscn" id="12_a1a60"]
+[ext_resource type="PackedScene" uid="uid://dn6ehv7kfqk2v" path="res://Bach/objekter/is/is_sten_3.tscn" id="13_my6dy"]
+
+[sub_resource type="Gradient" id="Gradient_wn7ny"]
+offsets = PackedFloat32Array(0.00735294, 1)
+colors = PackedColorArray(0.1739, 0.27195, 0.37, 1, 0.1972, 0.47792, 0.58, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_leuea"]
+gradient = SubResource("Gradient_wn7ny")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_xaq1a"]
+seed = 2
+frequency = 0.0064
+fractal_type = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_c0pl3"]
+in_3d_space = true
+seamless = true
+seamless_blend_skirt = 0.041
+as_normal_map = true
+bump_strength = 2.3
+noise = SubResource("FastNoiseLite_xaq1a")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_awoax"]
+seed = 2
+frequency = 0.0229
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vouxt"]
+in_3d_space = true
+seamless = true
+as_normal_map = true
+noise = SubResource("FastNoiseLite_awoax")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eckgm"]
+render_priority = 0
+shader = ExtResource("10_1cyww")
+shader_parameter/texture_str = 0.3
+shader_parameter/start_color = Color(0.713802, 0.357195, 0.49729, 1)
+shader_parameter/stone_normal = SubResource("NoiseTexture2D_c0pl3")
+shader_parameter/stone_normal2 = SubResource("NoiseTexture2D_vouxt")
+shader_parameter/gradient_texture = SubResource("GradientTexture2D_leuea")
+shader_parameter/shape = ExtResource("11_wn6bk")
+
+[sub_resource type="QuadMesh" id="QuadMesh_afu3v"]
+material = SubResource("ShaderMaterial_eckgm")
+size = Vector2(12, 12)
 
 [node name="PreScene1p2" type="Node3D"]
 
 [node name="STEN_S_VÆG6" parent="." instance=ExtResource("1_62cl5")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.67888, 1.67012, 4.62793)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.3626, 1.67012, 5.69828)
 
 [node name="STEN_S_VÆG7" parent="STEN_S_VÆG6" instance=ExtResource("2_inhbc")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.0553064, -0.011982, 5.53204)
@@ -39,28 +88,79 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.285
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -11.5415, 0.133177, 5.13509)
 
 [node name="PreStone2" parent="." instance=ExtResource("5_3vf60")]
-transform = Transform3D(0.380879, 0, -0.463607, 0, 0.6, 0, 0.463607, 0, 0.380879, -4.96375, 0.137115, -5.96052)
+transform = Transform3D(-0.497861, 0, -0.334865, 0, 0.6, 0, 0.334865, 0, -0.497861, -4.27073, 0.0844597, 4.67298)
 
 [node name="PreStone3" parent="." instance=ExtResource("5_3vf60")]
-transform = Transform3D(0.14537, 0, -0.137359, 0, 0.2, 0, 0.137359, 0, 0.14537, 4.03135, -0.0301552, 2.37626)
+transform = Transform3D(0.190435, 0, -0.061109, 0, 0.2, 0, 0.061109, 0, 0.190435, 5.13232, -0.0301552, -1.05402)
 
 [node name="PreStone" parent="." instance=ExtResource("6_liuma")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 4.01453, -0.0301552, -3.34266)
+transform = Transform3D(0.594179, 0, 0.535678, 0, 0.8, 0, -0.535678, 0, 0.594179, 4.71373, -0.0301552, -3.43145)
 
 [node name="PreStone4" parent="." instance=ExtResource("5_3vf60")]
-transform = Transform3D(0.223895, 0, -0.447069, 0, 0.5, 0, 0.447069, 0, 0.223895, -5.0646, -0.0301552, -0.977078)
+transform = Transform3D(0.237889, 0, -0.439783, 0, 0.5, 0, 0.439783, 0, 0.237889, -2.98203, -0.0301552, -4.4928)
+
+[node name="PreStone4" parent="PreStone4" instance=ExtResource("5_3vf60")]
+transform = Transform3D(0.629322, 0, 0.306519, 0, 0.7, 0, -0.306519, 0, 0.629322, 2.55204, -0.0301552, 5.63043)
 
 [node name="PreStone5" parent="." instance=ExtResource("6_liuma")]
-transform = Transform3D(0.241434, 0, -0.178072, 0, 0.3, 0, 0.178072, 0, 0.241434, -5.59162, -0.0301552, 3.67901)
+transform = Transform3D(0.999524, 0, 0, 0, 1.47739, 0, 0, 0, 0.999524, -0.790519, -0.0301552, 1.37573)
 
 [node name="PreIceStones1" parent="." instance=ExtResource("7_pw4fb")]
-transform = Transform3D(0.921579, 0, -0.388191, 0, 1, 0, 0.388191, 0, 0.921579, -5.09202, -0.0301552, -3.51142)
+transform = Transform3D(0.196254, 0, 0.980553, 0, 1, 0, -0.980553, 0, 0.196254, -4.593, -0.0301552, 4.87095)
 
 [node name="IS_STEN1" parent="." instance=ExtResource("8_p45wk")]
-transform = Transform3D(0.320596, 0, -0.947216, 0, 1, 0, 0.947216, 0, 0.320596, 3.71948, 0.971686, 3.8641)
+transform = Transform3D(0.320596, 0, -0.947216, 0, 1, 0, 0.947216, 0, 0.320596, 4.4032, 0.971686, 4.93444)
 
 [node name="IS_STEN2" parent="." instance=ExtResource("8_p45wk")]
-transform = Transform3D(0.77088, 0, -0.63698, 0, 1, 0, 0.63698, 0, 0.77088, 4.34384, 0.943064, -2.01273)
+transform = Transform3D(-0.752835, 0, -0.812967, 0, 0.695897, 0, 1.08533, 0, -0.563912, -1.02418, 0.620518, -0.532677)
 
-[node name="PreIceStones2" parent="." instance=ExtResource("7_pw4fb")]
-transform = Transform3D(-0.887172, 0, 0.461439, 0, 1, 0, -0.461439, 0, -0.887172, -0.158762, 0, -0.212095)
+[node name="Fakkel2" parent="." instance=ExtResource("9_orwvm")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.13275, 1.42858, 2.10882)
+
+[node name="Fakkel" parent="." instance=ExtResource("9_orwvm")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.27222, 1.4579, -1.0921)
+
+[node name="Fakkel3" parent="." instance=ExtResource("9_orwvm")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.1145, 1.4579, 5.02186)
+
+[node name="Fakkel4" parent="." instance=ExtResource("9_orwvm")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.32713, 1.4579, 5.06628)
+
+[node name="Fakkel5" parent="." instance=ExtResource("9_orwvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.08961, 1.4579, 3.05212)
+
+[node name="Fakkel6" parent="." instance=ExtResource("9_orwvm")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.18251, 1.45987, -5.22427)
+
+[node name="Fakkel7" parent="." instance=ExtResource("9_orwvm")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.137509, 1.4579, -5.18143)
+
+[node name="Fakkel6" parent="Fakkel7" instance=ExtResource("9_orwvm")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -4.35064, 0.283993, 5.32535)
+
+[node name="Fakkel7" parent="Fakkel7" instance=ExtResource("9_orwvm")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -1.03062, 0.282027, 5.28252)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.999998, 0.00134283, 0.0015472, 0.0015472, -1.40769e-06, -0.999999, -0.00134283, 0.999999, -3.48531e-06, 0, 3.50572, 0)
+mesh = SubResource("QuadMesh_afu3v")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.999999, 0.00144501, 0.000102184, -0.000102186, 1.69424e-06, 1, 0.00144501, -0.999999, 1.84522e-06, 0, 0, 0)
+mesh = SubResource("QuadMesh_afu3v")
+
+[node name="IS_STEN3" parent="." instance=ExtResource("12_a1a60")]
+transform = Transform3D(0.16429, 0, 0.986412, 0, 1, 0, -0.986412, 0, 0.16429, 4.247, -0.0301552, -3.16314)
+
+[node name="IS_STEN4" parent="." instance=ExtResource("13_my6dy")]
+transform = Transform3D(0.922194, 0, 0.386727, 0, 1, 0, -0.386727, 0, 0.922194, 5.0967, -0.0301552, -2.55327)
+
+[node name="IS_STEN5" parent="." instance=ExtResource("12_a1a60")]
+transform = Transform3D(-0.268937, 0, 0.963158, 0, 1, 0, -0.963158, 0, -0.268937, 3.15124, 0.593927, 5.38299)
+
+[node name="IS_STEN6" parent="." instance=ExtResource("12_a1a60")]
+transform = Transform3D(0.536873, 0, 0.843663, 0, 1, 0, -0.843663, 0, 0.536873, 3.60395, -0.0301552, -4.67899)
+
+[node name="IS_STEN7" parent="." instance=ExtResource("8_p45wk")]
+transform = Transform3D(1.79166, 0, 2.40623, 0, 3, 0, -2.40623, 0, 1.79166, -5.5257, -0.0301552, -4.23547)
