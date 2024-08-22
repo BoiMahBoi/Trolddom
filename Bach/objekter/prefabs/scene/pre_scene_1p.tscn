@@ -1,9 +1,9 @@
 [gd_scene load_steps=22 format=3 uid="uid://c80a5uj4htq3h"]
 
-[ext_resource type="PackedScene" uid="uid://cnt3kdot74ixp" path="res://Bach/objekter/sten/sten_s_væg_2.tscn" id="1_8ug8y"]
-[ext_resource type="PackedScene" uid="uid://ddk8r6q446gtd" path="res://Bach/objekter/sten/sten_s_væg.tscn" id="2_kqgh4"]
+[ext_resource type="PackedScene" uid="uid://cnt3kdot74ixp" path="res://Bach/objekter/sten/stones/walls/sten_s_væg_2.tscn" id="1_8ug8y"]
+[ext_resource type="PackedScene" uid="uid://ddk8r6q446gtd" path="res://Bach/objekter/sten/stones/walls/sten_s_væg.tscn" id="2_kqgh4"]
 [ext_resource type="PackedScene" uid="uid://0f11c1viulkl" path="res://Bach/objekter/sten/sten_port.tscn" id="3_r8hb7"]
-[ext_resource type="PackedScene" uid="uid://djgr7iqr4igea" path="res://Bach/objekter/sten/sten_l_væg_1.tscn" id="4_n30st"]
+[ext_resource type="PackedScene" uid="uid://djgr7iqr4igea" path="res://Bach/objekter/sten/stones/walls/sten_l_væg_1.tscn" id="4_n30st"]
 [ext_resource type="PackedScene" uid="uid://ctnb3eeqfkw31" path="res://Bach/objekter/prefabs/stone/pre_stone2.tscn" id="5_n8h3j"]
 [ext_resource type="PackedScene" uid="uid://dhh88rh56rdit" path="res://Bach/objekter/prefabs/stone/pre_stone.tscn" id="6_gqi67"]
 [ext_resource type="PackedScene" uid="uid://doy5abbhl7pi" path="res://Bach/objekter/prefabs/ice_stones/pre_ice_stones_1.tscn" id="7_puay2"]

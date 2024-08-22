@@ -1,9 +1,10 @@
-[gd_scene load_steps=24 format=3 uid="uid://b3nwj1hn3ulld"]
+[gd_scene load_steps=25 format=3 uid="uid://b3nwj1hn3ulld"]
 
 [ext_resource type="ArrayMesh" uid="uid://dgfylepqlwkl7" path="res://Bach/objekter/light/fakkel.obj" id="1_x6jsa"]
 [ext_resource type="Shader" path="res://Bach/shaders/fakkel.gdshader" id="2_p03xd"]
 [ext_resource type="Texture2D" uid="uid://bfny4a6848p7b" path="res://Bach/objekter/light/fakkel_color_texture.png" id="3_deenb"]
 [ext_resource type="Shader" uid="uid://berh82wgat362" path="res://Bach/shaders/fire.tres" id="4_20460"]
+[ext_resource type="Material" uid="uid://br7ldpsv8egfe" path="res://Bach/shaders/Material.001.tres" id="4_ijypy"]
 [ext_resource type="Shader" uid="uid://cv1w2j700rbed" path="res://Bach/shaders/smoke.tres" id="5_40ugv"]
 [ext_resource type="Shader" uid="uid://btt8t2ixfr7b4" path="res://Bach/shaders/sparks.tres" id="6_n7ug5"]
 
@@ -100,6 +101,7 @@ size = Vector2(0.04, 0.04)
 transform = Transform3D(0.035, 0, 0, 0, 0.035, 0, 0, 0, 0.035, -0.0210869, 0, 0.00200045)
 mesh = ExtResource("1_x6jsa")
 surface_material_override/0 = SubResource("ShaderMaterial_kag53")
+surface_material_override/1 = ExtResource("4_ijypy")
 
 [node name="fire" type="CPUParticles3D" parent="."]
 transform = Transform3D(0.937349, -0.348392, 0, 0.348392, 0.937349, 0, 0, 0, 1, -0.151065, 0.465926, -0.000358522)
