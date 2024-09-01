@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://c80a5uj4htq3h"]
+[gd_scene load_steps=23 format=3 uid="uid://c80a5uj4htq3h"]
 
 [ext_resource type="PackedScene" uid="uid://cnt3kdot74ixp" path="res://Bach/objekter/sten/stones/walls/sten_s_væg_2.tscn" id="1_8ug8y"]
 [ext_resource type="PackedScene" uid="uid://ddk8r6q446gtd" path="res://Bach/objekter/sten/stones/walls/sten_s_væg.tscn" id="2_kqgh4"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cd3085egl2ln" path="res://Bach/maps/Screenshot 2024-07-26 205402.png" id="11_cvrqj"]
 [ext_resource type="PackedScene" uid="uid://cxdvmybi55w4t" path="res://Bach/objekter/is/is_sten_2.tscn" id="12_b4xph"]
 [ext_resource type="PackedScene" uid="uid://dn6ehv7kfqk2v" path="res://Bach/objekter/is/is_sten_3.tscn" id="13_cuvmw"]
+[ext_resource type="PackedScene" uid="uid://wmgx5f55mm2c" path="res://Bach/objekter/chest/kiste.glb" id="14_8ubnw"]
 
 [sub_resource type="Gradient" id="Gradient_wn7ny"]
 offsets = PackedFloat32Array(0.00735294, 1)
@@ -156,3 +157,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.83218, -0.0301552, -4.2281
 
 [node name="IS_STEN7" parent="." instance=ExtResource("8_mxwsx")]
 transform = Transform3D(1.79166, 0, 2.40623, 0, 3, 0, -2.40623, 0, 1.79166, -5.5257, -0.0301552, -4.23547)
+
+[node name="kiste" parent="." instance=ExtResource("14_8ubnw")]
+transform = Transform3D(-0.259808, 0, 0.15, 0, 0.3, 0, -0.15, 0, -0.259808, 2.26609, 0.455961, -3.40473)

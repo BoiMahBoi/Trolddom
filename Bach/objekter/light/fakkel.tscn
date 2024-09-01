@@ -137,8 +137,8 @@ draw_pass_1 = SubResource("QuadMesh_pboyx")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.146159, 0.366918, 0)
-light_color = Color(1, 0.566667, 0.35, 1)
-light_energy = 1.5
+light_color = Color(1, 0.527, 0.34, 1)
+light_energy = 0.304
 light_volumetric_fog_energy = 11.185
-omni_range = 3.937
+omni_range = 6.0
 omni_shadow_mode = 0

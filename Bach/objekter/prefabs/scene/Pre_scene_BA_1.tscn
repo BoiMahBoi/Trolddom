@@ -9,55 +9,58 @@
 [node name="PreSceneBa1" type="Node3D"]
 
 [node name="PreScene1p2" parent="." instance=ExtResource("1_lpujx")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 49.9165, 1.75849, -15.9695)
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 17.422, -3.34064, -32.2289)
 
 [node name="STEN_S_VÆG20" parent="." instance=ExtResource("2_2ukm3")]
-transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 17.5876, -3.37635, -8.37296)
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 0.727041, -1.85867, 23.1606)
 
 [node name="STEN_S_VÆG21" parent="." instance=ExtResource("2_2ukm3")]
-transform = Transform3D(-0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, 15.9353, -3.37635, -14.1596)
+transform = Transform3D(-0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, -0.92526, -1.85867, 17.374)
+
+[node name="STEN_S_VÆG30" parent="." instance=ExtResource("2_2ukm3")]
+transform = Transform3D(0.99616, 0, 0.0875557, 0, 1, 0, -0.0875557, 0, 0.99616, -1.97209, -1.85867, 11.9329)
+
+[node name="STEN_S_VÆG35" parent="." instance=ExtResource("2_2ukm3")]
+transform = Transform3D(-0.957214, 0, -0.289383, 0, 1, 0, 0.289383, 0, -0.957214, -3.40157, -1.85867, 5.40965)
 
 [node name="STEN_S_VÆG22" parent="." instance=ExtResource("2_2ukm3")]
-transform = Transform3D(-1.17225e-07, 0, -1, 0, 1, 0, 1, 0, -1.17225e-07, 22.0591, -3.33945, -5.90985)
-
-[node name="STEN_S_VÆG23" parent="." instance=ExtResource("3_joi70")]
-transform = Transform3D(-0.5, 5.21152e-08, -0.866026, -8.9407e-08, -1, 1.49012e-08, -0.866026, 2.89431e-08, 0.5, 27.6115, -3.30921, -7.26892)
+transform = Transform3D(-1.17225e-07, 0, -1, 0, 1, 0, 1, 0, -1.17225e-07, 5.19854, -1.82177, 25.6237)
 
 [node name="STEN_S_VÆG10" parent="." instance=ExtResource("2_2ukm3")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.379316, 3.24033, -12.5346)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -16.4812, 4.75801, 18.999)
 
 [node name="STEN_S_VÆG11" parent="." instance=ExtResource("2_2ukm3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.477629, 3.24033, -6.5175)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.3829, 4.75801, 25.0161)
 
 [node name="STEN_S_VÆG12" parent="." instance=ExtResource("3_joi70")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.47376, 3.24033, -1.70709)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -16.3868, 4.75801, 29.8265)
 
 [node name="STEN_S_VÆG15" parent="." instance=ExtResource("3_joi70")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.41251, 0, 6.39144)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.44805, 1.51768, 37.925)
 
 [node name="STEN_S_VÆG16" parent="." instance=ExtResource("2_2ukm3")]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 6.66206, 3.24033, 6.1716)
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -10.1985, 4.75801, 37.7052)
 
 [node name="STEN_S_VÆG17" parent="." instance=ExtResource("2_2ukm3")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12.6792, 3.24033, 6.07328)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.18136, 4.75801, 37.6069)
 
 [node name="STEN_S_VÆG4" parent="." instance=ExtResource("2_2ukm3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25391, 0, 0.101951)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.6066, 1.51768, 31.6355)
 
 [node name="STEN_S_VÆG5" parent="." instance=ExtResource("2_2ukm3")]
-transform = Transform3D(-1, 0, 8.74228e-08, 7.64274e-15, -1, 8.74228e-08, 8.74228e-08, 8.74228e-08, 1, 0.155598, 0, -5.91516)
+transform = Transform3D(-1, 0, 8.74228e-08, 7.64274e-15, -1, 8.74228e-08, 8.74228e-08, 8.74228e-08, 1, -16.705, 1.51768, 25.6184)
 
 [node name="STEN_S_VÆG6" parent="." instance=ExtResource("2_2ukm3")]
-transform = Transform3D(-0.513751, 0, 0.857939, 0, 1, 0, -0.857939, 0, -0.513751, 2.65912, 0, -30.9901)
+transform = Transform3D(-0.513751, 0, 0.857939, 0, 1, 0, -0.857939, 0, -0.513751, -14.2014, 1.51768, 0.543476)
 
 [node name="STEN_S_VÆG7" parent="." instance=ExtResource("2_2ukm3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0718671, 0, -27.035)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.9324, 1.51768, 4.49858)
 
 [node name="STEN_S_VÆG7" parent="STEN_S_VÆG7" instance=ExtResource("2_2ukm3")]
-transform = Transform3D(-1, 0, -2.38498e-08, 0, 1, 0, 2.38498e-08, 0, -1, 0.210044, 3.22227, 2.40865)
+transform = Transform3D(-1, 0, -2.38498e-08, 0, 1, 0, 2.38498e-08, 0, -1, 0.210045, 3.22227, 1.60932)
 
 [node name="STEN_S_VÆG8" parent="STEN_S_VÆG7" instance=ExtResource("3_joi70")]
-transform = Transform3D(1, 0, 1.11273e-07, -9.72775e-15, -1, 8.74228e-08, 1.11273e-07, -8.74228e-08, -1, 0.117913, 3.31942, 8.34626)
+transform = Transform3D(1, 0, 1.11273e-07, -9.72775e-15, -1, 8.74228e-08, 1.11273e-07, -8.74228e-08, -1, 0.117912, 3.31942, 8.1125)
 
 [node name="STEN_S_VÆG10" parent="STEN_S_VÆG7" instance=ExtResource("2_2ukm3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 43.261, 6.59235, 1.41834)
@@ -83,32 +86,80 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.0411, 3.35202, -1.29613)
 [node name="STEN_S_VÆG14" parent="STEN_S_VÆG7" instance=ExtResource("2_2ukm3")]
 transform = Transform3D(-1, 0, -2.38498e-08, 0, 1, 0, 2.38498e-08, 0, -1, 43.0198, 6.57429, -11.7011)
 
+[node name="STEN_S_VÆG16" parent="STEN_S_VÆG7" instance=ExtResource("2_2ukm3")]
+transform = Transform3D(-1, 0, -2.38498e-08, 0, 1, 0, 2.38498e-08, 0, -1, 43.0198, 6.57429, -17.9767)
+
 [node name="STEN_S_VÆG15" parent="STEN_S_VÆG7" instance=ExtResource("3_joi70")]
 transform = Transform3D(1, 0, 1.11273e-07, -9.72775e-15, -1, 8.74228e-08, 1.11273e-07, -8.74228e-08, -1, 42.9277, 6.67144, -4.9311)
 
 [node name="STEN_S_VÆG9" parent="STEN_S_VÆG7" instance=ExtResource("2_2ukm3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.8098, 3.35202, -22.0975)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.8098, 3.35202, -17.9827)
 
 [node name="STEN_S_VÆG8" parent="." instance=ExtResource("3_joi70")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.210044, 0, -20.324)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -16.6505, 1.51768, 11.2096)
 
 [node name="STEN_S_VÆG" parent="." instance=ExtResource("2_2ukm3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.126955, 0, 0.0509753)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7336, 1.51768, 31.5846)
 
 [node name="STEN_S_VÆG2" parent="." instance=ExtResource("3_joi70")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.159467, 0, -10.7256)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7011, 1.51768, 20.808)
 
 [node name="STEN_S_VÆG3" parent="." instance=ExtResource("2_2ukm3")]
-transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 1.9784, 0, 4.23654)
+transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -14.8822, 1.51768, 35.7701)
 
 [node name="STEN_S_VÆG9" parent="." instance=ExtResource("3_joi70")]
-transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 2.19603, 3.23983, 4.39206)
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -14.6645, 4.75751, 35.9256)
 
 [node name="STEN_L_VÆG2" parent="." instance=ExtResource("4_khb5b")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14.5686, 0, 6.25986)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.29196, 1.51768, 37.7934)
+
+[node name="STEN_S_VÆG23" parent="." instance=ExtResource("3_joi70")]
+transform = Transform3D(-0.5, 5.21152e-08, -0.866026, -8.9407e-08, -1, 1.49012e-08, -0.866026, 2.89431e-08, 0.5, 10.7509, -1.79153, 24.2647)
+
+[node name="STEN_S_VÆG28" parent="." instance=ExtResource("2_2ukm3")]
+transform = Transform3D(-0.500001, 0, 0.866028, 0, 1, 0, -0.866028, 0, -0.500001, 11.1368, 1.54664, 23.951)
+
+[node name="STEN_S_VÆG23" parent="STEN_S_VÆG28" instance=ExtResource("3_joi70")]
+transform = Transform3D(0.866025, -2.89431e-08, -0.499999, -8.9407e-08, -1, 1.49012e-08, -0.499999, 5.21152e-08, -0.866025, 1.09398, -3.57059, 5.58732)
+
+[node name="STEN_S_VÆG23" parent="STEN_S_VÆG28/STEN_S_VÆG23" instance=ExtResource("3_joi70")]
+transform = Transform3D(0.978277, -6.93317e-08, 0.207297, -8.89035e-08, -1, -5.00088e-08, 0.207297, 8.30021e-08, -0.978277, 1.43505, -3.5706, -5.88019)
+
+[node name="STEN_S_VÆG28" parent="STEN_S_VÆG28/STEN_S_VÆG23" instance=ExtResource("2_2ukm3")]
+transform = Transform3D(-0.965926, 1.56499e-08, 0.25882, -2.37565e-09, 1, -6.93325e-08, -0.25882, -6.75847e-08, -0.965926, 0.906424, -0.232423, -6.06738)
+
+[node name="STEN_S_VÆG29" parent="STEN_S_VÆG28/STEN_S_VÆG23" instance=ExtResource("2_2ukm3")]
+transform = Transform3D(-0.86807, -2.9328e-07, -0.496446, 2.09203e-07, -1, 2.24954e-07, -0.496446, 9.14173e-08, 0.86807, 3.44278, -3.5706, -11.8756)
+
+[node name="STEN_S_VÆG25" parent="STEN_S_VÆG28/STEN_S_VÆG23" instance=ExtResource("3_joi70")]
+transform = Transform3D(0.499998, 1.38e-07, -0.866026, -1.38078e-07, 1, 1.19634e-08, 0.866026, 1.23971e-07, 0.499998, 7.25734, -0.232427, -16.3612)
+
+[node name="STEN_S_VÆG30" parent="STEN_S_VÆG28/STEN_S_VÆG23" instance=ExtResource("2_2ukm3")]
+transform = Transform3D(0.5, 1.25262e-07, 0.866027, 1.07191e-07, -1, 8.27536e-08, 0.866027, 5.14535e-08, -0.5, 7.23673, -3.5706, -16.4572)
+
+[node name="STEN_S_VÆG26" parent="STEN_S_VÆG28/STEN_S_VÆG23" instance=ExtResource("3_joi70")]
+transform = Transform3D(0.965926, 2.36124e-07, 0.258817, -1.96497e-07, 1, -8.16626e-08, -0.258817, -2.58954e-08, 0.965926, 11.4868, -0.232429, -23.3034)
+
+[node name="STEN_S_VÆG31" parent="STEN_S_VÆG28/STEN_S_VÆG23" instance=ExtResource("2_2ukm3")]
+transform = Transform3D(0.965927, 1.46014e-09, -0.258818, 4.87721e-08, -1, 1.7638e-07, -0.258818, -1.82993e-07, -0.965927, 11.3887, -3.5706, -23.3084)
+
+[node name="STEN_S_VÆG27" parent="STEN_S_VÆG28/STEN_S_VÆG23" instance=ExtResource("3_joi70")]
+transform = Transform3D(-0.965926, -4.31509e-08, 0.258821, -2.37755e-08, 1, -1.1045e-07, -0.258821, -7.87386e-08, -0.965926, 10.93, -0.23243, -29.608)
+
+[node name="STEN_S_VÆG32" parent="STEN_S_VÆG28/STEN_S_VÆG23" instance=ExtResource("2_2ukm3")]
+transform = Transform3D(-0.965927, -2.67047e-07, -0.258821, 2.21493e-07, -1, 2.05167e-07, -0.258821, 1.40849e-07, 0.965927, 11.0125, -3.5706, -29.5547)
+
+[node name="STEN_S_VÆG33" parent="STEN_S_VÆG28/STEN_S_VÆG23" instance=ExtResource("3_joi70")]
+transform = Transform3D(-0.707106, 6.52715e-09, 0.707108, -5.35959e-08, 1, -1.46673e-07, -0.707108, -1.36465e-07, -0.707106, 13.5998, -0.23243, -35.5486)
+
+[node name="STEN_S_VÆG34" parent="STEN_S_VÆG28/STEN_S_VÆG23" instance=ExtResource("2_2ukm3")]
+transform = Transform3D(-0.707107, -3.06222e-07, -0.707109, 1.91673e-07, -1, 2.4139e-07, -0.707109, 3.51549e-08, 0.707107, 13.6445, -3.57061, -35.4612)
+
+[node name="STEN_S_VÆG28" parent="STEN_S_VÆG28" instance=ExtResource("2_2ukm3")]
+transform = Transform3D(-0.866027, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866027, 1.15983, -0.1291, 5.51447)
 
 [node name="STEN_S_VÆG13" parent="." instance=ExtResource("2_2ukm3")]
-transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 17.5988, 3.24033, -2.46637)
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 0.738241, 4.75801, 29.0672)
 
 [node name="STEN_S_VÆG13" parent="STEN_S_VÆG13" instance=ExtResource("2_2ukm3")]
 transform = Transform3D(-0.258819, 0, 0.965927, 0, 1, 0, -0.965927, 0, -0.258819, 3.35133, 0.0611191, -4.21315)
@@ -122,29 +173,122 @@ transform = Transform3D(0.866026, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866026, -1.72357, 
 [node name="STEN_S_VÆG13" parent="STEN_S_VÆG13/STEN_S_VÆG19/STEN_S_VÆG13" instance=ExtResource("2_2ukm3")]
 transform = Transform3D(-0.866026, 0, 0.500001, 0, 1, 0, -0.500001, 0, -0.866026, 1.57669, -0.012866, -6.40073)
 
-[node name="STEN_S_VÆG19" parent="STEN_S_VÆG13/STEN_S_VÆG19" instance=ExtResource("2_2ukm3")]
-transform = Transform3D(-0.866027, 0, -0.500001, 0, 1, 0, 0.500001, 0, -0.866027, -1.91489, -0.0321469, -6.45207)
-
 [node name="STEN_S_VÆG14" parent="." instance=ExtResource("3_joi70")]
-transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, 16.35, 3.24033, 2.17913)
+transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, -0.510559, 4.75801, 33.7127)
 
 [node name="STEN_S_VÆG18" parent="." instance=ExtResource("2_2ukm3")]
-transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 16.1858, 0, 3.18347)
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, -0.674759, 1.51768, 34.717)
 
 [node name="STEN_S_VÆG19" parent="." instance=ExtResource("2_2ukm3")]
-transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, 17.6482, 0, -2.65405)
+transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, 0.78764, 1.51768, 28.8795)
 
 [node name="STEN_L_VÆG1" parent="." instance=ExtResource("5_dofs6")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 41.454, 3.42836, -9.15313)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 24.5934, 4.94604, 22.3804)
 
 [node name="STEN_S_VÆG24" parent="." instance=ExtResource("2_2ukm3")]
-transform = Transform3D(1.31134e-07, -8.74228e-08, -1, -7.64274e-15, -1, 8.74228e-08, -1, -3.82137e-15, -1.31134e-07, 33.6725, 6.59235, -9.08303)
+transform = Transform3D(1.31134e-07, -8.74228e-08, -1, -7.64274e-15, -1, 8.74228e-08, -1, -3.82137e-15, -1.31134e-07, 16.8119, 8.11003, 22.4505)
 
 [node name="STEN_S_VÆG25" parent="." instance=ExtResource("2_2ukm3")]
-transform = Transform3D(0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, 0.5, 27.762, 6.59235, -7.54869)
+transform = Transform3D(0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, 0.5, 10.9014, 8.11003, 23.9849)
 
 [node name="STEN_S_VÆG26" parent="." instance=ExtResource("3_joi70")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.1755, 6.59235, -5.82402)
+transform = Transform3D(4.37114e-08, 8.74228e-08, -1, 3.82137e-15, -1, -8.74228e-08, -1, 0, -4.37114e-08, 4.50935, 8.11003, 25.7096)
 
 [node name="STEN_S_VÆG27" parent="." instance=ExtResource("3_joi70")]
-transform = Transform3D(-1.54984e-07, 8.74228e-08, 1, -9.72775e-15, -1, 8.74228e-08, 1, 3.82137e-15, 1.54984e-07, 39.7012, 6.67144, -9.41629)
+transform = Transform3D(-1.54984e-07, 8.74228e-08, 1, -9.72775e-15, -1, 8.74228e-08, 1, 3.82137e-15, 1.54984e-07, 22.8406, 8.18912, 22.1173)
+
+[node name="STEN_S_VÆG29" parent="." instance=ExtResource("2_2ukm3")]
+transform = Transform3D(0.486121, -4.37114e-08, 0.873891, 4.49135e-08, -1, -7.50034e-08, 0.873891, 7.57103e-08, -0.486121, -14.0367, 4.79457, 0.604994)
+
+[node name="STEN_S_VÆG31" parent="." instance=ExtResource("2_2ukm3")]
+transform = Transform3D(-0.0159519, 0, 0.999872, 0, 1, 0, -0.999872, 0, -0.0159519, -8.22347, 1.51768, -1.13079)
+
+[node name="STEN_S_VÆG32" parent="." instance=ExtResource("2_2ukm3")]
+transform = Transform3D(0.0159524, -1.17125e-08, -0.999873, -4.35189e-08, 1, -1.24082e-08, 0.999873, 4.37113e-08, 0.0159524, -8.1116, 4.79457, -0.995168)
+
+[node name="STEN_S_VÆG33" parent="." instance=ExtResource("2_2ukm3")]
+transform = Transform3D(-0.950608, 5.94333e-08, -0.310395, -7.6398e-08, -1, 4.24981e-08, -0.310395, 6.41125e-08, 0.950608, -4.17206, 4.79457, -4.56213)
+
+[node name="STEN_S_VÆG34" parent="." instance=ExtResource("2_2ukm3")]
+transform = Transform3D(0.950608, 1.04654e-07, 0.310395, 1.19917e-07, -1, -3.00898e-08, 0.310395, 6.58252e-08, -0.950608, -4.26278, 1.51768, -4.46889)
+
+[node name="STEN_S_VÆG36" parent="." instance=ExtResource("2_2ukm3")]
+transform = Transform3D(-0.978448, -7.98344e-08, 0.206494, -9.27813e-08, 1, -5.30149e-08, -0.206494, -7.10312e-08, -0.978448, -4.13574, -1.8403, -4.20121)
+
+[node name="STEN_S_VÆG37" parent="." instance=ExtResource("2_2ukm3")]
+transform = Transform3D(0.998553, 1.04422e-08, 0.0537829, -6.70679e-09, 1, -6.96336e-08, -0.0537829, 6.91722e-08, 0.998553, -3.28205, -1.81327, -11.0967)
+
+[node name="STEN_S_VÆG38" parent="." instance=ExtResource("2_2ukm3")]
+transform = Transform3D(-0.998553, -3.36811e-08, -0.0537833, -3.68122e-08, 1, 5.72254e-08, 0.0537833, 5.91225e-08, -0.998553, -3.21855, 1.46362, -11.1858)
+
+[node name="STEN_S_VÆG39" parent="." instance=ExtResource("2_2ukm3")]
+transform = Transform3D(-0.998553, -1.79942e-07, -0.0537833, 1.7832e-07, -1, 3.49627e-08, -0.0537833, 2.53215e-08, 0.998553, -3.30056, 4.8216, -11.0395)
+
+[node name="STEN_S_VÆG40" parent="." instance=ExtResource("2_2ukm3")]
+transform = Transform3D(-0.662058, 4.77469e-08, 0.749452, -6.70679e-09, 1, -6.96336e-08, -0.749452, -5.1128e-08, -0.662058, -1.5305, -1.81327, -16.4306)
+
+[node name="STEN_S_VÆG41" parent="." instance=ExtResource("2_2ukm3")]
+transform = Transform3D(0.662058, 6.72595e-08, -0.749452, -3.68122e-08, 1, 5.72254e-08, 0.749452, -1.02976e-08, 0.662058, -1.25274, 1.46362, -16.7769)
+
+[node name="STEN_S_VÆG42" parent="." instance=ExtResource("2_2ukm3")]
+transform = Transform3D(0.577729, 1.31558e-07, 0.816229, 1.7832e-07, -1, 3.49627e-08, 0.816229, 1.25351e-07, -0.577729, -1.0696, 4.8216, -16.8941)
+
+[node name="STEN_S_VÆG43" parent="." instance=ExtResource("2_2ukm3")]
+transform = Transform3D(-0.399309, -6.65194e-08, -0.916816, -6.70679e-09, 1, -6.96337e-08, 0.916816, -2.16564e-08, -0.399309, 6.59046, -1.81327, -17.5013)
+
+[node name="STEN_S_VÆG44" parent="." instance=ExtResource("2_2ukm3")]
+transform = Transform3D(0.399309, -3.77658e-08, 0.916817, -3.68122e-08, 1, 5.72254e-08, -0.916817, -5.66006e-08, 0.399309, 6.4605, 1.46362, -17.4954)
+
+[node name="STEN_S_VÆG45" parent="." instance=ExtResource("2_2ukm3")]
+transform = Transform3D(0.495474, 5.79835e-08, -0.868623, 1.7832e-07, -1, 3.49626e-08, -0.868623, -1.72216e-07, -0.495474, 6.37016, 4.8216, -17.6324)
+
+[node name="STEN_S_VÆG46" parent="." instance=ExtResource("2_2ukm3")]
+transform = Transform3D(0.91713, -2.16042e-08, -0.398589, -6.70679e-09, 1, -6.96337e-08, 0.398589, 6.65364e-08, 0.91713, 10.6474, -1.81327, -18.896)
+
+[node name="STEN_S_VÆG47" parent="." instance=ExtResource("2_2ukm3")]
+transform = Transform3D(-0.91713, -5.65709e-08, 0.398588, -3.68122e-08, 1, 5.72254e-08, -0.398588, 3.78102e-08, -0.91713, 10.6534, 1.46362, -18.766)
+
+[node name="STEN_S_VÆG48" parent="." instance=ExtResource("2_2ukm3")]
+transform = Transform3D(-0.869011, -1.72261e-07, -0.494792, 1.7832e-07, -1, 3.49626e-08, -0.494792, -5.78483e-08, 0.869011, 10.5165, 4.8216, -18.6756)
+
+[node name="STEN_S_VÆG52" parent="." instance=ExtResource("2_2ukm3")]
+transform = Transform3D(-0.91467, 2.39931e-08, -0.4042, -7.29354e-08, -1, 1.05687e-07, -0.4042, 1.26149e-07, 0.91467, 12.9009, 4.79457, -23.2197)
+
+[node name="STEN_S_VÆG53" parent="." instance=ExtResource("2_2ukm3")]
+transform = Transform3D(0.91467, 6.8814e-08, 0.404201, 1.16454e-07, -1, -9.3279e-08, 0.404201, 1.3239e-07, -0.91467, 12.8013, 1.55524, -23.1361)
+
+[node name="STEN_S_VÆG54" parent="." instance=ExtResource("2_2ukm3")]
+transform = Transform3D(0.952794, 1.01013e-07, -0.303617, -1.03011e-07, 1, 9.43671e-09, 0.303617, 2.22847e-08, 0.952794, 12.8276, -1.80274, -22.9741)
+
+[node name="STEN_S_VÆG49" parent="." instance=ExtResource("2_2ukm3")]
+transform = Transform3D(-0.869038, -4.02794e-08, -0.494746, -6.70679e-09, 1, -6.96337e-08, 0.494746, -5.71961e-08, -0.869038, 19.184, -1.81327, -23.0655)
+
+[node name="STEN_S_VÆG50" parent="." instance=ExtResource("2_2ukm3")]
+transform = Transform3D(0.869037, 3.67908e-09, 0.494747, -3.68122e-08, 1, 5.72254e-08, -0.494747, -6.79437e-08, 0.869037, 19.0764, 1.46362, -23.1387)
+
+[node name="STEN_S_VÆG51" parent="." instance=ExtResource("2_2ukm3")]
+transform = Transform3D(0.917151, 1.49612e-07, -0.39854, 1.7832e-07, -1, 3.49626e-08, -0.39854, -1.03134e-07, -0.917151, 19.0862, 4.8216, -23.3025)
+
+[node name="STEN_L_VÆG3" parent="." instance=ExtResource("5_dofs6")]
+transform = Transform3D(-0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, -4.59399, -1.73772, 0.709248)
+
+[node name="STEN_L_VÆG4" parent="." instance=ExtResource("5_dofs6")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 15.3105, -1.82772, -1.99496)
+
+[node name="STEN_L_VÆG5" parent="." instance=ExtResource("5_dofs6")]
+transform = Transform3D(-0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, 15.3105, 1.59878, -1.72303)
+
+[node name="STEN_L_VÆG6" parent="." instance=ExtResource("4_khb5b")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 18.7446, -1.59848, 6.70144)
+
+[node name="STEN_L_VÆG7" parent="." instance=ExtResource("5_dofs6")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 15.8216, 1.48221, -26.3644)
+
+[node name="STEN_L_VÆG8" parent="." instance=ExtResource("5_dofs6")]
+transform = Transform3D(4.37114e-08, -8.74228e-08, 1, -3.82137e-15, -1, -8.74228e-08, 1, 0, -4.37114e-08, 15.81, 4.82102, -26.3644)
+
+[node name="STEN_L_VÆG9" parent="." instance=ExtResource("5_dofs6")]
+transform = Transform3D(1.19209e-07, 0, 1, 0, 1, 0, -1, 0, 1.19209e-07, 2.81348, 1.48221, -18.9081)
+
+[node name="STEN_L_VÆG10" parent="." instance=ExtResource("5_dofs6")]
+transform = Transform3D(5.96046e-08, 8.74228e-08, -1, -3.82137e-15, -1, -8.74228e-08, -1, 7.10543e-15, -5.96046e-08, 2.82514, 4.82102, -18.9081)
