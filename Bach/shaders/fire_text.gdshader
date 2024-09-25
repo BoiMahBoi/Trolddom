@@ -21,15 +21,15 @@ void vertex(){
 void fragment(){
 	//vec4 fireTex =  texture(fire_noise, UV);
 	//vec4 gradient_color = texture(gradient_tex, fireTex.rg);
-	
+
 	//ALBEDO = gradient_color.rgb;
-	
+
 	float vobing = texture(vobing_tex, UV + TIME * scroll).r;
-	
+
 	float pattern_intensity = texture(fire_noise, UV + TIME * scroll).r;
 	float pattern_intensity2 = texture(fire_noise, UV + TIME * scroll2).r;
 	float intensity =  pattern_intensity * pattern_intensity2;
-	vec4 color = texture(tone_mapping, vec2(intensity)); 
-	
+	vec4 color = texture(tone_mapping, vec2(intensity));
+
 	ALBEDO = color.rgb;
 }

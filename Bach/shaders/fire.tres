@@ -32,12 +32,13 @@ texture = SubResource("GradientTexture2D_7ytyw")
 
 [sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_juck1"]
 output_port_for_preview = 0
+default_input_values = [0, 0.0, 1, 1.0]
 operator = 2
 
 [sub_resource type="VisualShaderNodeVectorDecompose" id="VisualShaderNodeVectorDecompose_nwmjc"]
 
 [sub_resource type="VisualShaderNodeUVFunc" id="VisualShaderNodeUVFunc_1ggq8"]
-default_input_values = [1, Vector2(2, 1), 2, Vector2(0, 0)]
+default_input_values = [1, Vector2(6, 1), 2, Vector2(0, 0)]
 
 [sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_vqqla"]
 input_name = "color"
@@ -120,7 +121,7 @@ void fragment() {
 
 
 // UVFunc:18
-	vec2 n_in18p1 = vec2(2.00000, 1.00000);
+	vec2 n_in18p1 = vec2(6.00000, 1.00000);
 	vec2 n_out18p0 = n_out14p0 * n_in18p1 + UV;
 
 
@@ -189,6 +190,7 @@ void fragment() {
 
 }
 "
+graph_offset = Vector2(-848.378, 2.96527)
 modes/cull = 2
 flags/unshaded = true
 nodes/vertex/0/position = Vector2(1380, 120)
@@ -230,5 +232,5 @@ nodes/fragment/27/node = SubResource("VisualShaderNodeFloatOp_rlubs")
 nodes/fragment/27/position = Vector2(1180, 380)
 nodes/fragment/28/node = SubResource("VisualShaderNodeVec2Parameter_5460k")
 nodes/fragment/28/position = Vector2(-1160, 560)
-nodes/fragment/connections = PackedInt32Array(8, 0, 9, 0, 7, 0, 10, 0, 10, 0, 11, 0, 13, 0, 14, 0, 11, 0, 16, 0, 15, 0, 17, 0, 17, 0, 16, 1, 16, 0, 9, 1, 18, 0, 7, 0, 14, 0, 18, 2, 20, 0, 6, 1, 21, 0, 6, 0, 21, 0, 5, 0, 6, 0, 0, 0, 9, 0, 21, 0, 5, 0, 27, 0, 27, 0, 0, 1, 28, 0, 14, 1)
+nodes/fragment/connections = PackedInt32Array(8, 0, 9, 0, 7, 0, 10, 0, 10, 0, 11, 0, 13, 0, 14, 0, 11, 0, 16, 0, 15, 0, 17, 0, 16, 0, 9, 1, 18, 0, 7, 0, 14, 0, 18, 2, 20, 0, 6, 1, 21, 0, 6, 0, 21, 0, 5, 0, 6, 0, 0, 0, 9, 0, 21, 0, 5, 0, 27, 0, 27, 0, 0, 1, 28, 0, 14, 1, 17, 0, 16, 1)
 nodes/light/0/position = Vector2(1120, 140)
